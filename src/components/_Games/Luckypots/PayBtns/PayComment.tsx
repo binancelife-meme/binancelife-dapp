@@ -19,7 +19,8 @@ const PayComment = ({
   return (
     <div className={className || "flex gap-1"}>
       <fieldset className="w-[60%] max-md:w-full">
-        <Checkbox isSelected={isAddComment} onValueChange={setIsAddComment}>
+        <div className="flex flex-row items-center">
+          <Checkbox isSelected={isAddComment} onValueChange={setIsAddComment} />
           <Tips
             className="text-foreground-800 text-sm"
             startContent={t('tips_title')}
@@ -32,7 +33,7 @@ const PayComment = ({
               </div>
             }
           />
-        </Checkbox>
+        </div>
         <Spacer y={2} />
         <AnimatePresence>
           {isAddComment && (

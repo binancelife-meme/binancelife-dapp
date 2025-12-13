@@ -38,6 +38,7 @@ const GridHeader = ({ item }: { item: Luckypot }) => {
                         value={token.value}
                         display="Crypto"
                         showSuffix={true}
+                        endContent={<span className="text-xs text-gray-400 font-medium"> #{item.luckypotId}</span>}
                     />
                     <JoinStateItem
                         className="flex flex-row items-center w-auto h-auto text-[10px] px-1 py-0 rounded-full border border-white/10 ml-auto sm:ml-2"

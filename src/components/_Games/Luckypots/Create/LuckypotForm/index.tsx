@@ -158,18 +158,9 @@ const LuckypotForm = ({
                   }
                   text={
                     <ul className="text-pm text-foreground-600 list-disc px-4">
-                      <li>
-                        The luckypot will automatically end when the time is up if
-                        someone participates.
-                      </li>
-                      <li>
-                        Prizes can be claimed back after the end if no one
-                        participates.
-                      </li>
-                      <li>
-                        Please evaluate the duration carefully so that you can
-                        get enough participants and sales.
-                      </li>
+                      <li>{t("endTimeTips.1")}</li>
+                      <li>{t("endTimeTips.2")}</li>
+                      <li>{t("endTimeTips.3")}</li>
                     </ul>
                   }
                 />
@@ -205,14 +196,14 @@ const LuckypotForm = ({
                     setValue(name, dv.toAbsoluteString()); // utc
                   }}
                 >
-                  <CustomRadio value="1">1 hour</CustomRadio>
-                  <CustomRadio value="6">6 hour</CustomRadio>
-                  <CustomRadio value="24">1 day</CustomRadio>
-                  <CustomRadio value="48">2 days</CustomRadio>
-                  <CustomRadio value="72">3 days</CustomRadio>
-                  <CustomRadio value="168">7 days</CustomRadio>
-                  <CustomRadio value="336">14 days</CustomRadio>
-                  <CustomRadio value="720">30 days</CustomRadio>
+                  <CustomRadio value="1">{t("durations.1h")}</CustomRadio>
+                  <CustomRadio value="6">{t("durations.6h")}</CustomRadio>
+                  <CustomRadio value="24">{t("durations.1d")}</CustomRadio>
+                  <CustomRadio value="48">{t("durations.2d")}</CustomRadio>
+                  <CustomRadio value="72">{t("durations.3d")}</CustomRadio>
+                  <CustomRadio value="168">{t("durations.7d")}</CustomRadio>
+                  <CustomRadio value="336">{t("durations.14d")}</CustomRadio>
+                  <CustomRadio value="720">{t("durations.30d")}</CustomRadio>
                 </RadioGroup>
               }
             />

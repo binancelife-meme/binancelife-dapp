@@ -51,7 +51,9 @@ const Header = ({ item }: { item: Luckypot }) => {
                             value={token.value}
                             display="Crypto"
                             showSuffix={true}
+                            endContent={<span className="text-xs text-gray-400 font-medium"> #{item.luckypotId}</span>}
                         />
+                       
                     </h3>
                     {/* Funder Info */}
                     <div className="flex items-center space-x-1 mb-3 opacity-80 hover:opacity-100 transition-opacity z-10">

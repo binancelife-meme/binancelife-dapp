@@ -1,4 +1,12 @@
 {
+  "auth": {
+    "sign_in_to": "登录 币安人生",
+    "sign_button_pending": "请在钱包确认",
+    "sign_button_label": "签名消息",
+    "sign_message_content": "登录到 币安人生: {timestamp}",
+    "sign_in_failed": "登录失败",
+    "user_denied": "用户拒绝访问账户"
+  },
   "intro": {
     "title": "币安人生 (BinanceLife)",
     "description": "一个Meme币，起源与币安创始人何一的一句玩笑话“你可太性情太通透了，简直就是币安思维，祝你持有BNB开币安汽车，住币安小区，享币安人生”，在社群中点燃了一场史无前例的中文迷因风暴",
@@ -286,10 +294,26 @@
     "powerUnit": "灵力数量/票",
     "endTime": "结束时间",
     "maxPerUser": "最大票数限制/人",
-    "maxPerUserTip": "每个钱包票数上限，0 表示无限制，默认 0",
-    "note": "额外留言(可选)",
-    "balance": "余额",
-    "btn": {
+      "maxPerUserTip": "每个钱包票数上限，0 表示无限制，默认 0",
+      "note": "额外留言(可选)",
+      "balance": "余额",
+      "endTimeTip": "结束时间提示",
+      "endTimeTips": {
+        "1": "如果有人参与，抽奖将在时间结束时自动结束。",
+        "2": "如果没有人参与，结束后可以取回奖品。",
+        "3": "请仔细评估持续时间，以便获得足够的参与者。"
+      },
+      "durations": {
+        "1h": "1小时",
+        "6h": "6小时",
+        "1d": "1天",
+        "2d": "2天",
+        "3d": "3天",
+        "7d": "7天",
+        "14d": "14天",
+        "30d": "30天"
+      },
+      "btn": {
       "submit": "确认发起",
       "approval": "请在钱包确认",
       "confirm": "请在钱包确认交易",

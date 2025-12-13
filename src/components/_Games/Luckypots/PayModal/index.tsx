@@ -9,6 +9,7 @@ import {
 import type { Luckypot } from "@/types/luckypot/luckypot";
 
 import LuckypotPayBtns from "../PayBtns";
+import { useTranslations } from "next-intl";
 
 const LuckypotPayModal = ({
   item,
@@ -20,6 +21,7 @@ const LuckypotPayModal = ({
   onOpen?: any;
   onClose?: any;
 }) => {
+  const t = useTranslations("form");
   return (
     <>
       <Modal
@@ -34,8 +36,8 @@ const LuckypotPayModal = ({
       >
         <ModalContent>
           <ModalHeader>
-            <span className="text-white">参与活动</span>
-            <Chip size="sm" className="bg-yellow-400 text-black font-bold">{item.title}</Chip>
+            <span className="text-white">{t("btn_play")}</span>
+            <Chip size="sm" className="bg-yellow-400 text-black font-bold">{item.title}<span className="text-xs text-gray-400 font-medium"> #{item.luckypotId}</span></Chip>
           </ModalHeader>
           <ModalBody>
             <LuckypotPayBtns item={item} className="!border-none !bg-transparent" />

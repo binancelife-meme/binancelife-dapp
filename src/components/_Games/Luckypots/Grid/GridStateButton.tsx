@@ -1,14 +1,12 @@
 
-import { Button, Spinner, useDisclosure, Chip } from "@heroui/react";
+import { Spinner, useDisclosure, Chip } from "@heroui/react";
 import { useTranslations } from "next-intl";
 
 import { getLuckypotStatus, LuckypotStatus, type Luckypot } from "@/types/luckypot";
-import { cn } from "@/utils/cn";
 
 import LuckypotPayModal from "../PayModal";
 
-// 假设我们有这些 hook 或函数来处理取消、领奖和退款逻辑
-// 如果没有，这里暂时留空或使用 placeholder 函数
+
 const useCancelLuckypot = () => ({ cancel: () => console.log("Cancel") });
 const useClaimPrize = () => ({ claim: () => console.log("Claim") });
 const useRefundSponsorship = () => ({ refund: () => console.log("Refund") });

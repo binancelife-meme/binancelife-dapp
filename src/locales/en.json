@@ -1,4 +1,12 @@
 {
+  "auth": {
+    "sign_in_to": "Sign in to {name}",
+    "sign_button_pending": "Confirm in your Wallet",
+    "sign_button_label": "Sign Message",
+    "sign_message_content": "Sign in to {name}: {timestamp}",
+    "sign_in_failed": "Sign in Failed",
+    "user_denied": "User denied account access"
+  },
   "profile": {
     "edit_title": "Edit Profile",
     "edit_button_title": "Edit Profile",
@@ -63,6 +71,22 @@
     "desc": "Only for Testnet environment",
     "success": "Claim Successful",
     "view_faucet": "Open Faucet"
+  },
+  "form": {
+    "btn_save": "Save",
+    "btn_play": "Play Now",
+    "profit": "Pending Profit",
+    "wallet_confirm": "Please confirm in your wallet",
+    "copy_address": "Copy Wallet Address",
+    "success": "Success",
+    "tx_success": "Transaction Successful",
+    "tx_fail": "Transaction Failed",
+    "tx_view": "View Transaction",
+    "form_saved": "Form Saved",
+    "form_saved_fail": "Form Save Failed",
+    "upload_fail": "Upload Failed",
+    "field_nickname": "Nickname",
+    "field_address": "Wallet Address"
   },
   "share": {
     "copy_link": "Copy Link",
@@ -260,6 +284,22 @@
     "maxPerUserTip": "Max tickets per wallet, 0 means unlimited, default 0",
     "note": "Extra Note (Optional)",
     "balance": "Balance",
+    "endTimeTip": "End Time Tips",
+    "endTimeTips": {
+      "1": "The luckypot will automatically end when the time is up if someone participates.",
+      "2": "Prizes can be claimed back after the end if no one participates.",
+      "3": "Please evaluate the duration carefully so that you can get enough participants and sales."
+    },
+    "durations": {
+      "1h": "1 hour",
+      "6h": "6 hours",
+      "1d": "1 day",
+      "2d": "2 days",
+      "3d": "3 days",
+      "7d": "7 days",
+      "14d": "14 days",
+      "30d": "30 days"
+    },
     "btn": {
       "submit": "Confirm Create",
       "approval": "Please confirm in wallet",

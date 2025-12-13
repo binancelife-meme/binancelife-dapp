@@ -3,7 +3,7 @@ import { useAccount } from "wagmi"
 
 import { ChainId } from "@/constants/chains/chainId"
 import { NativeCurrency } from "@/constants/tokens/_base"
-import { Native } from "@/types/token"
+import { Native } from "@/types/token/native"
 
 export default function useNativeCurrency(overrideChainId?: ChainId): NativeCurrency {
     const { chainId } = useAccount()

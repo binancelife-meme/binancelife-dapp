@@ -16,6 +16,7 @@ import {
   useEffect,
 } from "react";
 import { useAccount, useSignMessage } from "wagmi";
+import { useTranslations } from "next-intl";
 
 import { AppConfig } from "@/config";
 import { useNotify } from "@/hooks";
@@ -49,6 +50,8 @@ const AuthModal = ({
   onClose?: any;
   onSignIn?: any;
 }) => {
+  const t = useTranslations("auth");
+
   return (
     <>
       <Modal
@@ -62,7 +65,7 @@ const AuthModal = ({
         }}
       >
         <ModalContent>
-          <ModalHeader>Sign in to {AppConfig.name}</ModalHeader>
+          <ModalHeader>{t("sign_in_to", { name: AppConfig.name })}</ModalHeader>
           <ModalBody>
             <SignButton
               account={account}
@@ -87,6 +90,7 @@ export const SignButton = ({
   address?: string;
   onSignIn?: any;
 }) => {
+  const t = useTranslations("auth");
   const { isConnected } = useAccount();
   const {
     data: signMessageData,
@@ -96,7 +100,10 @@ export const SignButton = ({
   } = useSignMessage();
 
   const [message] = useState(
-    `Sign in to ${AppConfig.name}: ${new Date().getTime()}`
+    t("sign_message_content", {
+      name: AppConfig.name,
+      timestamp: new Date().getTime(),
+    })
   );
 
   useEffect(() => {
@@ -128,7 +135,9 @@ export const SignButton = ({
         signMessage({ message });
       }}
     >
-      {isPending ? "Confirm in your Wallet" : label ?? "Sign Message"}
+      {isPending
+        ? t("sign_button_pending")
+        : label ?? t("sign_button_label")}
     </Button>
   );
 };
@@ -158,6 +167,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [account, setAccount] = useState<User | null>(loadAccount());
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { notifyError } = useNotify();
+  const t = useTranslations("auth");
 
   const onSignIn = async (message: string, signature: string) => {
     const rsp = await signIn(message, signature);
@@ -165,7 +175,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       onClose();
     } else {
       notifyError({
-        title: "Sign in Failed",
+        title: t("sign_in_failed"),
         message: rsp.message,
       });
     }
@@ -201,12 +211,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       } else {
         console.error("Sign in failed");
         storeAccount(null);
-        return { state: false };
+        return { state: false, message: "Sign in failed" };
       }
     } catch (error) {
       console.error("User denied account access");
       storeAccount(null);
-      return { state: false };
+      return { state: false, message: "User denied account access" };
     }
   };
 

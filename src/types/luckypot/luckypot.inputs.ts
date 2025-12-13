@@ -1,8 +1,10 @@
+import { Token } from "@/constants";
+
 export type LuckypotCreateInputs = {
   startTime: BigInt;
   endTime: BigInt;
   maxPerUser: BigInt;
-  powerToken: string;
+  powerToken: Token;
   powerUnit: BigInt;
   prizeToken: string;
   prizeAmount: BigInt;

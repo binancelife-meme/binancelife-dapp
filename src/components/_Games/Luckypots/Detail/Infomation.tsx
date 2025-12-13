@@ -33,6 +33,7 @@ const Infomation = ({ item }: { item: Luckypot }) => {
               value={token.value}
               display="Crypto"
               showSuffix={true}
+              endContent={<span className="text-xs text-gray-400 font-medium"> #{item.luckypotId}</span>}
             />
           </AppLink>
           <div className="flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10">

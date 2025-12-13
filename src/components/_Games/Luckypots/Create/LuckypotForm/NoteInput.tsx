@@ -10,28 +10,30 @@ import Tips from "@/components/Tips";
 const NoteInput = (opt: any) => {
   const { register, watch } = useFormContext();
   const t = useTranslations("luckypotCreate");
+  const tBuy = useTranslations("luckypotBuy");
   const { note } = watch();
 
   const [isOption, setIsOption] = useState(!isEmpty(note));
 
   return (
     <fieldset>
-      <Checkbox isSelected={isOption} onValueChange={setIsOption}>
+      <div className="flex flex-row items-center">
+        <Checkbox isSelected={isOption} onValueChange={setIsOption} />
         <Tips
           startContent={t("note")}
           placement="bottom-start"
           text={
             <div>
-              <p>Optional.</p>
-              <p>Add a description on-chain.</p>
-              <p>Max 250 characters.</p>
-            </div>
+                <p>{tBuy('pay_comment.optional')}</p>
+                <p>{tBuy('pay_comment.desc')}</p>
+                <p>{tBuy('pay_comment.max_chars')}</p>
+              </div>
           }
         />
-      </Checkbox>
+      </div>
       <Spacer y={2} />
       <AnimatePresence>
-        {isOption && <Textarea {...register("note")} placeholder="Optional" />}
+        {isOption && <Textarea {...register("note")} placeholder={tBuy('pay_comment.placeholder')} />}
       </AnimatePresence>
     </fieldset>
   );

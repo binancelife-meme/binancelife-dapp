@@ -57,7 +57,7 @@ const GridStats = ({ item }: { item: Luckypot }) => {
             <div className="flex items-center gap-1 hidden md:flex" title="Start - End Time">
                 <Calendar className="w-3 h-3 text-gray-500" />
                 <span className="whitespace-nowrap">
-                    {new Date(item.startTime).toLocaleString()} - {new Date(item.endTime).toLocaleString()}
+                    {new Date(item.endTime*1000).toLocaleString()}
                 </span>
             </div>
         </div>

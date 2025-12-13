@@ -1,6 +1,6 @@
 import { Address, Hash } from 'viem'
 
-import { ERC20Token } from '@/types/token'
+import { ERC20Token } from '@/types/token/token'
 
 import { ChainId } from '../../chains'
 
