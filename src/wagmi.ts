@@ -35,6 +35,9 @@ const config = getDefaultConfig({
     ...(process.env.NODE_ENV === "production"
       ? [{
         ...bsc,
+      }, {
+        ...bscTestnet,
+        name: "BNB Testnet",
       }]
       : [{
         ...bscTestnet,
