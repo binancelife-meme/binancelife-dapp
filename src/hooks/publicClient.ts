@@ -1,7 +1,7 @@
 import { createPublicClient, http } from "viem";
 
 import { ChainId } from "@/constants";
-import { chains } from "@/wagmi";
+import { chains } from "@/constants/chains";
 
 export const publicClient = (chainId: ChainId) => {
     const chain = chains.find((x) => x.id == chainId);

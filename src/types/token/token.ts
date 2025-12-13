@@ -1,8 +1,8 @@
 import invariant from 'tiny-invariant'
-import { Address } from 'viem'
+import warning from 'tiny-warning'
+import { Address, getAddress } from 'viem'
 
 import { BaseCurrency, Currency, Token } from '@/constants/tokens/_base'
-import { validateAndParseAddress } from '@/utils/address'
 
 export interface SerializedToken {
   chainId: number
@@ -11,6 +11,16 @@ export interface SerializedToken {
   symbol: string
   name?: string
   projectLink?: string
+}
+
+function validateAndParseAddress(address: string): Address {
+  try {
+    const checksummedAddress = getAddress(address)
+    warning(address === checksummedAddress, `${address} is not checksummed.`)
+    return checksummedAddress
+  } catch (error) {
+    invariant(false, `${address} is not a valid address.`)
+  }
 }
 
 // /**

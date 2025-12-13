@@ -20,6 +20,7 @@ import Container from "@/components/Container";
 import WalletConnector from "@/components/WalletConnector";
 import { AppConfig } from "@/config";
 import { NewLuckypot } from "@/config/defaults/NewLuckypot";
+import { chains } from "@/constants/chains";
 import { getDeploysByName } from "@/constants/contracts/address";
 import { ContractNames } from "@/constants/contracts/names";
 import { useNotify, useWindowSize } from "@/hooks";
@@ -27,7 +28,6 @@ import { useContractAbi } from "@/hooks/useContractAbi";
 import useTokenApproval from "@/hooks/useTokenApproval";
 import { useRouter } from "@/libs/i18nNavigation";
 import { LuckypotPrize, PrizeType } from "@/types/luckypot";
-import { chains } from "@/wagmi";
 
 import LuckypotForm from "./LuckypotForm";
 import LuckypotGuide from "./LuckypotGuide";

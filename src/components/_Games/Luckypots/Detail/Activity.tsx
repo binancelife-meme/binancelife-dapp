@@ -10,13 +10,13 @@ import ServerError from "@/components/Error/ServerError";
 import LoadMore from "@/components/LoadMore";
 import UserLink from "@/components/UserLink";
 import { AppConfig } from "@/config";
+import { chains } from "@/constants/chains";
 import { useRefetchContext } from "@/context/RefetchContext";
 import { useLuckypotActivityQuery } from "@/hooks/data";
 import type { Luckypot, LuckypotDetailListQueryOpts } from "@/types";
 import type { LuckypotActivity } from "@/types/luckypot/luckypot.activity";
 import { getShortAddress } from "@/utils/address";
 import { cn } from "@/utils/cn";
-import { chains } from "@/wagmi";
 
 import { SkeletonEventItems } from "./loading";
 import TicketNumbers from "./TicketNumbers";

@@ -12,7 +12,7 @@ import { useAccount, usePublicClient, useWaitForTransactionReceipt, useWriteCont
 import AppLink from "@/components/AppLink";
 import WalletConnectButton from "@/components/WalletConnector/WalletConnectButton";
 import { AppConfig } from "@/config";
-import { ChainId } from "@/constants";
+import { ChainId, chains } from "@/constants/chains";
 import { getDeploysByName } from "@/constants/contracts/address";
 import { ContractNames } from "@/constants/contracts/names";
 import { POWER_TOKENS } from "@/constants/tokens/defaultToken";
@@ -23,7 +23,6 @@ import { useContractAbi } from "@/hooks/useContractAbi";
 import usePowerBalance from "@/hooks/usePowerBalance";
 import { getLuckypotStatus, Luckypot, LuckypotStatus } from "@/types";
 import { tokenValue } from "@/utils/formatters";
-import { chains } from "@/wagmi";
 
 import PayComment from "./PayComment";
 

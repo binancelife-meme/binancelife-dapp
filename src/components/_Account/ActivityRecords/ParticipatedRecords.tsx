@@ -10,9 +10,9 @@ import NoData from "@/components/Error/NoData";
 import ServerError from "@/components/Error/ServerError";
 import LoadMore from "@/components/LoadMore";
 import { AppConfig } from "@/config";
+import { chains } from "@/constants/chains";
 import { useUserLuckypotActivitiesQuery } from "@/hooks/data/useLuckypotQuery";
 import type { LuckypotActivity } from "@/types/luckypot";
-import { chains } from "@/wagmi";
 
 interface ParticipatedRecordsProps {
   userId: string;

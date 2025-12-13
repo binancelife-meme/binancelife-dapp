@@ -9,6 +9,7 @@ import AppLink from "@/components/AppLink";
 import { FirstPrizeBag, FourthPrizeBag, SecondPrizeBag, ThirdPrizeBag } from "@/components/Icons";
 import UserLink from "@/components/UserLink";
 import { AppConfig } from "@/config/AppConfig";
+import { chains } from "@/constants/chains";
 import { getDeploysByName } from "@/constants/contracts/address";
 import { ContractNames } from "@/constants/contracts/names";
 import { useRefetchContext } from "@/context/RefetchContext";
@@ -16,7 +17,6 @@ import { useContractAbi } from "@/hooks/useContractAbi";
 import { LuckypotStatus, getLuckypotStatus, type Luckypot } from "@/types/luckypot";
 import { cn } from "@/utils/cn";
 import { tokenValue } from "@/utils/formatters";
-import { chains } from "@/wagmi";
 
 const StatusPane = ({ item }: { item: Luckypot }) => {
   const t = useTranslations("luckypot.detail.status");

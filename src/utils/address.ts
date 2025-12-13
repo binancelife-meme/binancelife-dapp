@@ -2,7 +2,7 @@ import invariant from "tiny-invariant";
 import warning from "tiny-warning";
 import { Address, getAddress } from "viem";
 
-import { chains } from "@/wagmi";
+import { chains } from "@/constants/chains";
 
 // warns if addresses are not checksummed
 // eslint-disable-next-line consistent-return

@@ -13,7 +13,7 @@ import {
   Zap
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { erc20Abi, parseEther } from "viem";
 import { useAccount, useBalance, useWriteContract, useWaitForTransactionReceipt, useReadContract, usePublicClient } from "wagmi";
@@ -66,6 +66,8 @@ const PowerStaking = () => {
     first: 10
   });
   const [stakeAmount, setStakeAmount] = useState("");
+  const [pendingStakeAmount, setPendingStakeAmount] = useState<string | null>(null);
+  const approveHandledRef = useRef<string | null>(null);
 
   // Write Contracts
   const {
@@ -94,7 +96,11 @@ const PowerStaking = () => {
 
   // Transaction Receipts
   const { isSuccess: isStakeSuccess, isLoading: isStakeConfirming } = useWaitForTransactionReceipt({ hash: stakeHash });
-  const { isSuccess: isApproveSuccess, isLoading: isApproveConfirming } = useWaitForTransactionReceipt({ hash: approveHash });
+  const { 
+    isSuccess: isApproveSuccess, 
+    isLoading: isApproveConfirming,
+    isError: isApproveReceiptError 
+  } = useWaitForTransactionReceipt({ hash: approveHash });
   const { isSuccess: isUnstakeSuccess, isLoading: isUnstakeConfirming } = useWaitForTransactionReceipt({ hash: unstakeHash });
   const { isSuccess: isClaimSuccess, isLoading: isClaimConfirming } = useWaitForTransactionReceipt({ hash: claimHash });
 
@@ -110,63 +116,10 @@ const PowerStaking = () => {
     }
   });
 
-  // Effects
-  useEffect(() => {
-    if (isStakeSuccess) {
-      toast.success(t("action.success_stake"));
-      setStakeAmount("");
-      refetchStakes();
-      refetchAllowance();
-      refetchUserStakeStats();
-      refetchPendingPower();
-    }
-  }, [isStakeSuccess, refetchStakes, refetchAllowance, refetchUserStakeStats, refetchPendingPower, t]);
-
-  useEffect(() => {
-    if (isApproveSuccess) {
-      toast.success(t("action.success_approve"));
-      refetchAllowance();
-    }
-  }, [isApproveSuccess, refetchAllowance, t]);
-
-  useEffect(() => {
-    if (isUnstakeSuccess) {
-      toast.success(t("action.success_unstake"));
-      refetchStakes();
-      refetchUserStakeStats();
-      refetchPendingPower();
-    }
-  }, [isUnstakeSuccess, refetchStakes, refetchUserStakeStats, refetchPendingPower, t]);
-
-  useEffect(() => {
-    if (isClaimSuccess) {
-      toast.success(t("action.success_claim"));
-      refetchStakes();
-      refetchUserStakeStats();
-      refetchPendingPower();
-    }
-  }, [isClaimSuccess, refetchStakes, refetchUserStakeStats, refetchPendingPower, t]);
-
-  // Actions
-  const handleApprove = (amount: string) => {
-    if (!powerToken?.address || !contractInfo?.address) return;
-    writeApprove({
-      address: powerToken.address as `0x${string}`,
-      abi: erc20Abi,
-      functionName: "approve",
-      args: [contractInfo?.address as `0x${string}`, parseEther(amount)],
-      chainId
-    });
-  };
-
-  const handleStake = async () => {
-    if (!stakeAmount || !luckyPowerMinerAbi || !powerToken?.address) return;
-    const amountWei = parseEther(stakeAmount);
-
-    if (!allowance || allowance < amountWei) {
-      handleApprove(stakeAmount);
-      return;
-    }
+  // Helper to execute stake
+  const executeStake = async (amount: string) => {
+    if (!luckyPowerMinerAbi || !powerToken?.address || !contractInfo?.address) return;
+    const amountWei = parseEther(amount);
 
     // Simulate transaction
     try {
@@ -195,6 +148,83 @@ const PowerStaking = () => {
       args: [powerToken.address, amountWei],
       chainId
     });
+  };
+
+  // Effects
+  useEffect(() => {
+    if (isStakeSuccess) {
+      toast.success(t("action.success_stake"));
+      setStakeAmount("");
+      refetchStakes();
+      refetchAllowance();
+      refetchUserStakeStats();
+      refetchPendingPower();
+    }
+  }, [isStakeSuccess, refetchStakes, refetchAllowance, refetchUserStakeStats, refetchPendingPower, t]);
+
+  useEffect(() => {
+    if (isApproveSuccess && approveHash && approveHandledRef.current !== approveHash) {
+      approveHandledRef.current = approveHash;
+      toast.success(t("action.success_approve"));
+      refetchAllowance();
+      if (pendingStakeAmount) {
+        executeStake(pendingStakeAmount);
+        setPendingStakeAmount(null);
+      }
+    }
+  }, [isApproveSuccess, approveHash, refetchAllowance, t, pendingStakeAmount]);
+
+  useEffect(() => {
+    if (isApproveReceiptError) {
+      setPendingStakeAmount(null);
+    }
+  }, [isApproveReceiptError]);
+
+  useEffect(() => {
+    if (isUnstakeSuccess) {
+      toast.success(t("action.success_unstake"));
+      refetchStakes();
+      refetchUserStakeStats();
+      refetchPendingPower();
+    }
+  }, [isUnstakeSuccess, refetchStakes, refetchUserStakeStats, refetchPendingPower, t]);
+
+  useEffect(() => {
+    if (isClaimSuccess) {
+      toast.success(t("action.success_claim"));
+      refetchStakes();
+      refetchUserStakeStats();
+      refetchPendingPower();
+    }
+  }, [isClaimSuccess, refetchStakes, refetchUserStakeStats, refetchPendingPower, t]);
+
+  // Actions
+  const handleApprove = (amount: string) => {
+    if (!powerToken?.address || !contractInfo?.address) return;
+    writeApprove({
+      address: powerToken.address as `0x${string}`,
+      abi: erc20Abi,
+      functionName: "approve",
+      args: [contractInfo?.address as `0x${string}`, parseEther(amount)],
+      chainId
+    }, {
+      onError: () => {
+        setPendingStakeAmount(null);
+      }
+    });
+  };
+
+  const handleStake = async () => {
+    if (!stakeAmount || !luckyPowerMinerAbi || !powerToken?.address) return;
+    const amountWei = parseEther(stakeAmount);
+
+    if (!allowance || allowance < amountWei) {
+      setPendingStakeAmount(stakeAmount);
+      handleApprove(stakeAmount);
+      return;
+    }
+
+    executeStake(stakeAmount);
   };
 
   const handleClaim = async () => {

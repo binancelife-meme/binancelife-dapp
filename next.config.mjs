@@ -1,66 +1,78 @@
-import createNextIntlPlugin from 'next-intl/plugin';
+import path from "path";
+import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin('./src/libs/i18n.ts');
+const withNextIntl = createNextIntlPlugin("./src/libs/i18n.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: false,
-    webpack: (config) => {
-        config.resolve.fallback = {
-            ...config.resolve.fallback,
-            fs: false,
-            net: false,
-            tls: false,
-            encoding: false,
+  reactStrictMode: false,
+  webpack: (config, { isServer }) => {
+    // Node core modules fallback (for browser bundles)
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+      encoding: false,
+    };
+
+    // Do not bundle @uxuycom/web3-tg-sdk into server/client; keep it external
+    config.externals = Array.isArray(config.externals)
+      ? [...config.externals, "@uxuycom/web3-tg-sdk"]
+      : {
+          ...config.externals,
+          "@uxuycom/web3-tg-sdk": "commonjs @uxuycom/web3-tg-sdk",
         };
 
-        config.externals = Array.isArray(config.externals)
-            ? [...config.externals, '@uxuycom/web3-tg-sdk']
-            : {
-                ...config.externals,
-                '@uxuycom/web3-tg-sdk': 'commonjs @uxuycom/web3-tg-sdk',
-            };
-
-
-        return config;
-    },
-    webpack: (config) => {
-        // Grab the existing rule that handles SVG imports
-        const fileLoaderRule = config.module.rules.find((rule) =>
-            rule.test?.test?.('.svg'),
-        )
-
-        config.module.rules.push(
-            // Reapply the existing rule, but only for svg imports ending in ?url
-            {
-                ...fileLoaderRule,
-                test: /\.svg$/i,
-                resourceQuery: /url/, // *.svg?url
-            },
-            // Convert all other *.svg imports to React components
-            {
-                test: /\.svg$/i,
-                issuer: fileLoaderRule.issuer,
-                resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
-                use: ['@svgr/webpack'],
-            },
-        )
-
-        // Modify the file loader rule to ignore *.svg, since we have it handled now.
-        fileLoaderRule.exclude = /\.svg$/i
-
-        return config
-    },
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: '**',
-                port: '',
-                pathname: '**',
-            }
-        ],
+    // On the server, replace idb-keyval with a server-safe stub
+    if (isServer) {
+      const idbStubPath = path.join(
+        process.cwd(),
+        "src",
+        "server-stubs",
+        "idb-keyval.ts"
+      );
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "idb-keyval": idbStubPath,
+      };
     }
+
+    // SVG handling: keep existing behavior and add SVGR for non-?url imports
+    const fileLoaderRule = config.module.rules.find((rule) =>
+      rule.test?.test?.(".svg")
+    );
+
+    if (fileLoaderRule) {
+      config.module.rules.push(
+        {
+          ...fileLoaderRule,
+          test: /\.svg$/i,
+          resourceQuery: /url/, // *.svg?url
+        },
+        {
+          test: /\.svg$/i,
+          issuer: fileLoaderRule.issuer,
+          resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] },
+          use: ["@svgr/webpack"],
+        }
+      );
+
+      fileLoaderRule.exclude = /\.svg$/i;
+    }
+
+    return config;
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "**",
+      },
+    ],
+  },
 };
 
 export default withNextIntl(nextConfig);

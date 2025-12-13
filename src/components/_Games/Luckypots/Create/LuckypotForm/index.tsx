@@ -14,16 +14,12 @@ import Logo from "@/components/Logo";
 import Tips from "@/components/Tips";
 import { ChainId } from "@/constants/chains";
 import { getTokenLogoURL, Token } from "@/constants/tokens";
-import { bscTokens } from "@/constants/tokens/chains/bsc";
 import { POWER_TOKENS } from "@/constants/tokens/defaultToken";
 import { cn } from "@/utils/cn";
-import { chains } from "@/wagmi";
-
 
 import CustomRadio from "./CustomRadio";
 import MaxPerUser from "./MaxPerUser";
 import NoteInput from "./NoteInput";
-
 
 
 const LuckypotForm = ({

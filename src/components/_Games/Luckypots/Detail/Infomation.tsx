@@ -7,12 +7,10 @@ import CountDown from "@/components/CountDown";
 import CryptoCurrency from "@/components/CryptoCurrency";
 import UserLink from "@/components/UserLink";
 import { AppConfig } from "@/config";
-import { MOMENTJS_LANGUAGES } from "@/constants/locale";
+import { chains } from "@/constants/chains";
 import { LuckypotStatus, type Luckypot } from "@/types";
 import { tokenValue } from "@/utils/formatters";
 import { getLuckypotPrizeToken } from "@/utils/prizeUtils";
-import { chains } from "@/wagmi";
-
 
 
 const Infomation = ({ item }: { item: Luckypot }) => {

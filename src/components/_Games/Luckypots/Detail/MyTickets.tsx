@@ -12,6 +12,7 @@ import LoadMore from "@/components/LoadMore";
 import UserLink from "@/components/UserLink";
 import WalletConnector from "@/components/WalletConnector";
 import { AppConfig } from "@/config";
+import { chains } from "@/constants/chains";
 import { useRefetchContext } from "@/context/RefetchContext";
 import { useLuckypotTicketsQuery } from "@/hooks/data";
 import type {
@@ -21,7 +22,6 @@ import type {
 } from "@/types/luckypot";
 import { getShortAddress } from "@/utils/address";
 import { cn } from "@/utils/cn";
-import { chains } from "@/wagmi";
 
 import { SkeletonEventItems } from "./loading";
 import TicketNumbers from "./TicketNumbers";

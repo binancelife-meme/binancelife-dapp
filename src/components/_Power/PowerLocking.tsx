@@ -16,7 +16,7 @@ import {
   Clock
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { erc20Abi, formatEther, parseEther } from "viem";
 import { useAccount, useBalance, useReadContract, useWaitForTransactionReceipt, useWriteContract } from "wagmi";
@@ -60,6 +60,8 @@ const PowerLocking = () => {
 
   const [lockAmount, setLockAmount] = useState("");
   const [lockDuration, setLockDuration] = useState("3");
+  const [pendingLockParams, setPendingLockParams] = useState<{ amount: string; duration: string } | null>(null);
+  const approveHandledRef = useRef<string | null>(null);
 
   // Write Contracts
   const {
@@ -82,7 +84,11 @@ const PowerLocking = () => {
 
   // Transaction Receipts
   const { isSuccess: isLockSuccess, isLoading: isLockConfirming } = useWaitForTransactionReceipt({ hash: lockHash });
-  const { isSuccess: isApproveSuccess, isLoading: isApproveConfirming } = useWaitForTransactionReceipt({ hash: approveHash });
+  const { 
+    isSuccess: isApproveSuccess, 
+    isLoading: isApproveConfirming, 
+    isError: isApproveReceiptError 
+  } = useWaitForTransactionReceipt({ hash: approveHash });
   const { isSuccess: isUnlockSuccess, isLoading: isUnlockConfirming } = useWaitForTransactionReceipt({ hash: unlockHash });
 
   // Read Allowance
@@ -97,6 +103,21 @@ const PowerLocking = () => {
     }
   });
 
+  // Helper to execute lock
+  const executeLock = (amount: string, duration: string) => {
+    if (!luckyPowerMinerAbi || !powerToken?.address || !contractInfo?.address) return;
+    const amountWei = parseEther(amount);
+    const durationSeconds = BigInt(duration) * BigInt(86400);
+
+    writeLock({
+      address: contractInfo?.address as `0x${string}`,
+      abi: luckyPowerMinerAbi,
+      functionName: "lock",
+      args: [powerToken.address, amountWei, durationSeconds],
+      chainId
+    });
+  };
+
   // Effects
   useEffect(() => {
     if (isLockSuccess) {
@@ -108,11 +129,22 @@ const PowerLocking = () => {
   }, [isLockSuccess, refetchLocks, refetchAllowance, t]);
 
   useEffect(() => {
-    if (isApproveSuccess) {
+    if (isApproveSuccess && approveHash && approveHandledRef.current !== approveHash) {
+      approveHandledRef.current = approveHash;
       toast.success(t("action.success_approve"));
       refetchAllowance();
+      if (pendingLockParams) {
+        executeLock(pendingLockParams.amount, pendingLockParams.duration);
+        setPendingLockParams(null);
+      }
     }
-  }, [isApproveSuccess, refetchAllowance, t]);
+  }, [isApproveSuccess, approveHash, refetchAllowance, t, pendingLockParams]);
+
+  useEffect(() => {
+    if (isApproveReceiptError) {
+      setPendingLockParams(null);
+    }
+  }, [isApproveReceiptError]);
 
   useEffect(() => {
     if (isUnlockSuccess) {
@@ -130,6 +162,10 @@ const PowerLocking = () => {
       functionName: "approve",
       args: [contractInfo?.address as `0x${string}`, parseEther(amount)],
       chainId
+    }, {
+      onError: () => {
+        setPendingLockParams(null);
+      }
     });
   };
 
@@ -137,20 +173,15 @@ const PowerLocking = () => {
     if (!lockAmount || !luckyPowerMinerAbi || !powerToken?.address) return;
 
     const amountWei = parseEther(lockAmount);
-    const durationSeconds = BigInt(lockDuration) * BigInt(86400);
+    // const durationSeconds = BigInt(lockDuration) * BigInt(86400);
 
     if (!allowance || allowance < amountWei) {
+      setPendingLockParams({ amount: lockAmount, duration: lockDuration });
       handleApprove(lockAmount);
       return;
     }
 
-    writeLock({
-      address: contractInfo?.address as `0x${string}`,
-      abi: luckyPowerMinerAbi,
-      functionName: "lock",
-      args: [powerToken.address, amountWei, durationSeconds],
-      chainId
-    });
+    executeLock(lockAmount, lockDuration);
   };
 
   const handleUnlock = (lockIndex: number) => {
