@@ -51,7 +51,7 @@ const AuditSection = () => {
         <div>
           <Button
             as={AppLink}
-            href="https://github.com/binancelife-meme/binancelife-docs/blob/main/README-zh.md"
+            href="https://github.com/binancelife-meme/binancelife-docs"
             variant="flat"
             target="_blank"
             className="bg-white/5 text-gray-300 hover:text-white hover:bg-white/10"
