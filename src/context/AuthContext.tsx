@@ -8,6 +8,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@heroui/react";
+import { useTranslations } from "next-intl";
 import {
   createContext,
   useContext,
@@ -16,7 +17,6 @@ import {
   useEffect,
 } from "react";
 import { useAccount, useSignMessage } from "wagmi";
-import { useTranslations } from "next-intl";
 
 import { AppConfig } from "@/config";
 import { useNotify } from "@/hooks";

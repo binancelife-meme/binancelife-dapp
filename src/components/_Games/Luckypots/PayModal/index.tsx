@@ -5,11 +5,12 @@ import {
   ModalBody,
   Chip,
 } from "@heroui/react";
+import { useTranslations } from "next-intl";
 
 import type { Luckypot } from "@/types/luckypot/luckypot";
 
 import LuckypotPayBtns from "../PayBtns";
-import { useTranslations } from "next-intl";
+
 
 const LuckypotPayModal = ({
   item,
