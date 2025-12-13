@@ -1,15 +1,14 @@
-import { useTranslations } from "next-intl";
 import { Button } from "@heroui/react";
+import { useTranslations } from "next-intl";
+
 import AppImage from "@/components/AppImage";
 import ChainIcon from "@/components/Chains/ChainIcon";
 import { DurationLabel } from "@/components/CountDown";
 import CryptoCurrency from "@/components/CryptoCurrency";
 import { VerifyIcon } from "@/components/Icons";
-
 import { Currency, getCurrencyLogoUrls } from "@/constants";
 import { getTokenBannerByName } from "@/constants/tokens/tokenBanner";
 import { cn } from "@/utils/cn";
-
 
 const CryptoPreview = ({
   endTime,
