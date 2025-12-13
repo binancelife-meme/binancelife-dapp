@@ -5,16 +5,17 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 
-import { useRouter } from "@/libs/i18nNavigation";
 import { AppConfig } from "@/config";
 import { ChainId } from "@/constants/chains";
+import { useRouter } from "@/libs/i18nNavigation";
 
 import { FloatingCoin, GlowEffect } from "../Animation/Animations";
 import AppLink from "../AppLink";
 import { BNBChainIcon } from "../Chains";
 
-import { WealthGodAnimation, WealthGodAnimationHandles } from "./WealthGodAnimation";
 import { FaucetModal } from "./FaucetModal";
+import { WealthGodAnimation, WealthGodAnimationHandles } from "./WealthGodAnimation";
+
 
 const Landscape = () => {
   const t = useTranslations("home");

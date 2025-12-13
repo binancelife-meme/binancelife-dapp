@@ -10,13 +10,13 @@ import {
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
-import { useAccount, useWriteContract, useWaitForTransactionReceipt } from "wagmi";
-import { parseEther } from "viem";
 import toast from "react-hot-toast";
+import { parseEther } from "viem";
+import { useAccount, useWriteContract, useWaitForTransactionReceipt } from "wagmi";
 
-import { bscTestnetTokens } from "@/constants/tokens/chains/bscTestnet";
-import { ChainId } from "@/constants/chains";
 import { AppConfig } from "@/config";
+import { ChainId } from "@/constants/chains";
+import { bscTestnetTokens } from "@/constants/tokens/chains";
 
 // Minimal ABI for mint function
 const mintAbi = [
