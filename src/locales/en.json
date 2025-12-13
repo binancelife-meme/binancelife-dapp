@@ -1,0 +1,526 @@
+{
+  "profile": {
+    "edit_title": "Edit Profile",
+    "edit_button_title": "Edit Profile",
+    "upload_avatar": {
+      "select_image": "Select Image File",
+      "size_limit": "File size cannot exceed 5MB"
+    }
+  },
+  "site": {
+    "name": "BinanceLife",
+    "title": "BinanceLife • Fortune Comes",
+    "description": "Inject a trace of power, start Binance Life"
+  },
+  "menu": {
+    "all": "All",
+    "home": "Home",
+    "luck": "Luck",
+    "power": "Power",
+    "leaderboard": "Leaderboard",
+    "account": "Account",
+    "more": "More",
+    "winners": "Winners",
+    "about": "About",
+    "contact": "Contact",
+    "help": "Help",
+    "docs": "Docs",
+    "faq": "FAQ",
+    "privicy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use"
+  },
+  "settings": {
+    "connect_button": "Connect Wallet",
+    "locale_label": "Language",
+    "theme_label": "Theme"
+  },
+  "common": {
+    "load_more": "Load More",
+    "loading_more": "Loading...",
+    "no_data": "No Data",
+    "coming_soon": "Coming Soon"
+  },
+  "home": {
+    "title": "Fortune Comes",
+    "sub_title": "Binance Life Community • On-chain Exclusive Prize Draw • New Meme Experience",
+    "fairness": "Platform Earns Nothing",
+    "transparency": "100% Sponsorship to Prize Pool",
+    "trustless": "Stake/Lock for Free Draw",
+    "permissionless": "Just for Fun",
+    "powered_by": "Powered By",
+    "get_power": "Get Power",
+    "faq": "FAQ",
+    "claim_test_tokens": "Claim Test Tokens",
+    "create_luckypot": "Create Luckypot"
+  },
+  "faucet": {
+    "title": "Claim Test Tokens",
+    "bnb_testnet": "Claim Testnet BNB",
+    "binance_life": "Claim Binance Life",
+    "usdt": "Claim USDT",
+    "claim": "Claim",
+    "claimed": "Claimed",
+    "desc": "Only for Testnet environment",
+    "success": "Claim Successful",
+    "view_faucet": "Open Faucet"
+  },
+  "share": {
+    "copy_link": "Copy Link",
+    "copy_success": "Copy Success",
+    "share_on": "Share on",
+    "share_text": "🚀 Try your luck on BinanceLife!\n💎 Check the link and win big prizes!\n{tags}\n"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "subtitle": "View user rankings and achievements",
+    "full_title": "Global Leaderboard",
+    "userRank": "User Rank",
+    "kolRank": "KOL Rank",
+    "sponsorRank": "Sponsor Rank",
+    "power": "Power",
+    "winnings": "Winnings",
+    "participations": "Participations",
+    "winRate": "Win Rate",
+    "followers": "Followers",
+    "sponsoredAmount": "Sponsored Amount",
+    "activitiesCreated": "Activities Created",
+    "avgReturn": "Avg Return",
+    "tabs": {
+      "winning": "Winning",
+      "sponsorship": "Sponsorship",
+      "initiator": "Initiator",
+      "locking": "Locking",
+      "staking": "Staking",
+      "power": "Power"
+    },
+    "no_data": {
+      "title": "No ranking data yet",
+      "subtitle": "Come and participate to hit the leaderboard"
+    }
+  },
+  "winner": {
+    "total_prize": "Total Prize",
+    "unclaimed": "Unclaimed",
+    "view_details": "View Details",
+    "load_more": "Load More",
+    "round": "Round #{id}",
+    "no_winners": "No Winners Yet"
+  },
+  "action": {
+    "success_claim": "Claim Success",
+    "success_join": "Join Success"
+  },
+  "games": {
+    "list": {
+      "latest_winner": "Latest Winners"
+    }
+  },
+  "luckypot": {
+    "header": {
+      "ending_soon": "Ending Soon",
+      "ended": "Ended",
+      "by": "by"
+    },
+    "title": "Lucky Draw",
+    "desc": "Did you draw today? Come and draw, don't blame me if you miss it",
+    "desc_list": "Everyone can participate and initiate lucky draw events",
+    "create": "Create Luckypot",
+    "more": "More",
+    "sponsor": {
+      "title": "Sponsor",
+      "boost_title": "Boost Prize Pool",
+      "boost_desc": "Support events you like and increase popularity",
+      "btn_sponsor": "Sponsor Now",
+      "modal_title": "Sponsor Event",
+      "amount_label": "Amount",
+      "balance": "Available Balance",
+      "placeholder": "Enter amount",
+      "notice": "* Sponsorship amount goes directly to prize pool and is non-refundable.",
+      "cancel": "Cancel",
+      "confirm": "Confirm Sponsor",
+      "error_amount": "Please enter a valid amount",
+      "error_tx": "Transaction failed to start",
+      "success": "Sponsorship Successful!",
+      "top3": "Top 3 Sponsors",
+      "total": "Total",
+      "list": "Sponsor List",
+      "no_sponsors_yet": "No sponsors yet, be the first!",
+      "sponsor_btn": "Sponsor",
+      "refund_btn": "Refund",
+      "success_refund": "Refund Success"
+    },
+    "infomation": {
+      "ended": "Ended",
+      "creator": "Creator:",
+      "pool_value": "Prize Pool Value",
+      "participants": "Participants",
+      "total_sponsored": "Total Sponsored",
+      "power_cost": "Power Cost",
+      "people": "People",
+      "per_ticket": "/ Ticket"
+    },
+    "detail": {
+      "tabs": {
+        "activity": "Activity",
+        "participants": "Participants",
+        "my_tickets": "My Tickets",
+        "sponsors": "Sponsors"
+      },
+      "activity": {
+        "tickets": "Tickets",
+        "load_more": "Load More",
+        "loading_more": "Loading..."
+      },
+      "my_tickets": {
+        "ticket_counts": "Ticket Counts:",
+        "your_chance": "Your Chance:",
+        "tickets": "Tickets",
+        "load_more": "Load More",
+        "loading_more": "Loading...",
+        "connect_wallet": "Connect Wallet to View"
+      },
+      "participants": {
+        "tickets": "Tickets",
+        "load_more": "Load More",
+        "loading_more": "Loading..."
+      },
+      "status": {
+        "creating": "Creating...",
+        "canceled": "Canceled",
+        "failed": "Failed",
+        "drawing": "Drawing...",
+        "ongoing": "Ongoing",
+        "ended": "Ended",
+        "grand_prize": "Grand Prize",
+        "second_prize": "2nd Prize",
+        "third_prize": "3rd Prize",
+        "consolation": "Consolation",
+        "winning_results": "Winning Results",
+        "draw_tx": "Draw TX",
+        "rank": "Rank",
+        "winning_no": "Winning No.",
+        "prize": "Prize",
+        "winner": "Winner",
+        "action_success": "Action Success",
+        "cancel_desc": "No participants yet, you can cancel.",
+        "cancel_btn": "Cancel Event",
+        "close_desc": "Expired with no participants, close to refund.",
+        "close_btn": "Close Event"
+      }
+    },
+    "prize": {
+      "total_amount": "Total Prize Amount"
+    },
+    "claim": {
+      "congrats": "Congratulations!",
+      "you_won": "You have {count} winning tickets",
+      "total_prize": "Total Prize",
+      "claim_btn": "Claim Prize"
+    },
+    "stat": {
+      "participants": "Participants",
+      "sponsors": "Sponsors",
+      "power_cost": "Power Cost/Ticket"
+    },
+    "state": {
+      "play": "Play Now",
+      "ongoing": "Ongoing",
+      "canceled": "Canceled",
+      "drawing": "Drawing",
+      "failed": "Expired",
+      "ended": "Ended"
+    },
+    "filter": {
+      "status": "Status",
+      "status_options": {
+        "1": "Ongoing",
+        "2": "Drawing",
+        "3": "Ended",
+        "4": "Canceled",
+        "5": "Expired"
+      },
+      "sort": "Sort",
+      "sort_options": {
+        "time-remaining": "Time Remaining",
+        "newest": "Newest",
+        "oldest": "Oldest"
+      }
+    }
+  },
+  "luckypotCreate": {
+    "caption": "Create Luckypot",
+    "name": "I want to be the richest today (Create Luckypot)",
+    "desc": "Fill it out, top trending in seconds",
+    "prize_select": "Select Prize",
+    "prize_amount": "Prize Amount",
+    "powerToken": "Power Token",
+    "powerUnit": "Power Unit/Ticket",
+    "endTime": "End Time",
+    "maxPerUser": "Max Tickets/User",
+    "maxPerUserTip": "Max tickets per wallet, 0 means unlimited, default 0",
+    "note": "Extra Note (Optional)",
+    "balance": "Balance",
+    "btn": {
+      "submit": "Confirm Create",
+      "approval": "Please confirm in wallet",
+      "confirm": "Please confirm transaction in wallet",
+      "view_tx": "View Transaction",
+      "apply": "Confirm"
+    },
+    "guide": {
+      "title": "Create Pool Guide",
+      "desc": "Select Prize: Choose BNB/USDT/Meme coins\nPrize Amount: Fill freely, 100U is fun, 10k U is godlike\nPower Token: Token required for draw, default is BinanceLife\nEnd Time: Min 1 hour, max 7 days, up to you\nExtra Note (Optional): e.g. \"Let's go brothers\", \"Even Binance would be silent\""
+    },
+    "success": {
+      "transaction_success": "Transaction Successful"
+    },
+    "error": {
+      "transaction_fail": "Transaction Failed",
+      "approval_fail": "Approval Failed",
+      "invalid_form": "Invalid Form",
+      "wallet_not_connected": "Wallet Not Connected",
+      "contract_not_ready": "Contract Not Ready",
+      "select_prize": "Please Select Prize",
+      "invalid_prize_amount": "Prize Amount Must be > 0",
+      "invalid_power_token": "Power Token Must be Selected",
+      "invalid_power_unit": "Power Unit Must be > 0",
+      "end_date_required": "Please Set End Date",
+      "end_date_in_future": "End Date Must be in Future"
+    }
+  },
+  "intro": {
+    "title": "BinanceLife",
+    "description": "Not just a Meme, but a decentralized lottery revolution on BSC. Fair, transparent, and permissionless.",
+    "contract_address": "Contract Address (BSC)",
+    "copied": "Address Copied",
+    "buy_button": "Buy Token",
+    "chart_button": "View Chart"
+  },
+  "audit": {
+    "title": "Top AI Security Audit",
+    "description": "Smart contracts audited by world-class AI models like Grok, GPT-5, and DeepSeek to ensure zero vulnerabilities.",
+    "view_report": "View Report"
+  },
+  "luckypotBuy": {
+    "error_require_tickets_title": "Tickets Required",
+    "error_require_tickets_msg": "Please input ticket amount",
+    "why_title": "Quadratic Funding Explanation",
+    "why_desc": "Uses quadratic algorithm to prevent whale dominance",
+    "tooltip_formula": "Power Cost = Tickets² × Unit Price",
+    "formula_title": "Cost Formula:",
+    "formula_calc": "{amount}² × {unit} = {pay} Power",
+    "cost": "Cost",
+    "power": "Power",
+    "success_detail": "Successfully bought {amount} tickets, cost {pay} {currency}",
+    "closed_success": "Draw closed",
+    "err_nonce_low": "Transaction rejected: nonce too low, please wait for previous tx or retry in wallet",
+    "err_insufficient_funds": "Insufficient funds to pay for this transaction",
+    "err_user_reject": "You rejected the transaction in wallet",
+    "err_underpriced": "Replacement transaction underpriced, please increase Gas or wait",
+    "btn_close": "Close Draw",
+    "tooltip_title": "More tickets, higher winning chance",
+    "tooltip_desc": "Power cost increases exponentially with each added ticket",
+    "current_power": "My Power",
+    "input_tickets": "Input Tickets",
+    "input_placeholder": "Enter tickets",
+    "ticket_unit": "Tickets",
+    "tips_prefix": "Not enough power? Go to",
+    "tips_link": "Get Power",
+    "tips_suffix": "",
+    "pay_comment": {
+      "tips_title": "Add on-chain comment",
+      "optional": "Optional",
+      "desc": "Add a comment on-chain",
+      "max_chars": "Max 250 chars",
+      "placeholder": "Enter comment (optional)"
+    }
+  },
+  "power": {
+    "title": "Get Power",
+    "subtitle": "Get Power through various ways to increase your winning probability",
+    "cards": {
+      "power_title": "Power",
+      "stake_title": "Staked Amount",
+      "lock_title": "Locked Amount",
+      "suffix_binancelife": "BinanceLife"
+    },
+    "tabs": {
+      "locking": "Locking - Exchange Power",
+      "staking": "Staking - Get Power"
+    },
+    "hints": {
+      "locking": {
+        "title": "Locking - Exchange Power",
+        "description": "Locking gets higher power output and faster speed."
+      },
+      "staking": {
+        "title": "Staking - Get Power",
+        "description": "Staking is more flexible, but output speed is slower and amount is less."
+      }
+    }
+  },
+  "powerLocking": {
+    "title": "Locking - Exchange Power",
+    "action": {
+      "power": "Power",
+      "lock_amount": "Lock Amount",
+      "available": "Available",
+      "duration": "Lock Duration",
+      "select_duration": "Select Duration",
+      "preview_power": "Total Power Preview",
+      "approve_loading": "Approving...",
+      "lock_loading": "Locking...",
+      "confirm_lock": "Confirm Lock",
+      "success_lock": "Lock Successful!",
+      "success_approve": "Approval Successful! Please continue",
+      "max": "MAX"
+    },
+    "duration_options": {
+      "day": "Day"
+    },
+    "history": {
+      "title": "Lock List",
+      "unlock_time": "Unlock Time",
+      "no_records": "No lock records",
+      "status": {
+        "locked": "Locked",
+        "unlocked": "Available",
+        "withdrawn": "Withdrawn"
+      },
+      "action": {
+        "unlock": "Retrieve",
+        "unlocking": "Retrieving..."
+      },
+      "locked_amount": "Locked Amount",
+      "power_amount": "Power Gained",
+      "countdown": "Remaining Time"
+    }
+  },
+  "powerStaking": {
+    "title": "Staking - Get Power",
+    "action": {
+      "stake_amount": "Stake Amount",
+      "available": "Available",
+      "max": "MAX",
+      "tips": "Deposit/Withdraw anytime, rewards settled in real-time",
+      "preview_mining": "Mining Yield Preview",
+      "power_per_day": "Power / Day",
+      "approve": "Approve",
+      "approve_loading": "Approving...",
+      "stake_loading": "Staking...",
+      "stake": "Stake Now",
+      "unstake_loading": "Retrieving...",
+      "unstake": "Retrieve",
+      "claim_loading": "Harvesting...",
+      "claim": "Harvest Power",
+      "success_stake": "Stake Successful!",
+      "success_approve": "Approval Successful! Please continue",
+      "success_unstake": "Retrieve Successful!",
+      "success_claim": "Harvest Power Successful!",
+      "error_input_unstake": "Please enter retrieve amount",
+      "error_no_staked": "No staked amount currently",
+      "error_no_claimable": "No claimable power currently"
+    },
+    "my_staking": {
+      "title": "My Staking",
+      "total_staked": "Total Staked",
+      "current_staked": "Current Staked",
+      "claimed_power": "Claimed Power",
+      "pending_power": "Pending Power"
+    },
+    "history": {
+      "title": "My Staking Records",
+      "mining": "Mining",
+      "current_yield": "Current Yield",
+      "per_day": "/Day",
+      "no_records": "No staking records"
+    }
+  },
+  "account": {
+    "activity": "Activity",
+    "wins": "Wins",
+    "bets": "Bets",
+    "total": "Total",
+    "wagered": "Wagered",
+    "winnings": "Winnings",
+    "statistic": "Statistic",
+    "top_play_games": "Top Played Games",
+    "bind_telegram": "Bind Telegram Account",
+    "tabs": {
+      "created": "My Created",
+      "participated": "My Participated",
+      "won": "My Won",
+      "sponsored": "My Sponsored"
+    }
+  },
+  "faqs": {
+    "q0": {
+      "title": "What exactly is BinanceLife • Fortune Comes?",
+      "content": "A chain-based meme lucky draw toy created by BinanceLife community enthusiasts (experimental project)<br/>Stake/Lock [BinanceLife] → Get Power (Platform Internal Points) → Use Power to participate in various lucky draws for free, that's it"
+    },
+    "q1": {
+      "title": "How to play?",
+      "content": "• Stake or Lock to get Power<br/>• Choose an event, participate or sponsor<br/>• Wait for the draw, claim rewards<br/>• Everything is simple, as happy as rolling dice!"
+    },
+    "q2": {
+      "title": "Activity Rules",
+      "content": "Each activity has 4 fixed prizes, corresponding to 80% / 10% / 6% / 4% prize distribution (including sponsorship)<br/>After the activity ends, 4 lucky numbers are drawn via Binance VRF, winners claim manually"
+    },
+    "q3": {
+      "title": "Do you make money? Do you issue tokens?",
+      "content": "We don't make money, nor do we issue tokens<br/>The platform takes no cut, no fees, no commission from sponsorship. All sponsorship goes 100% into the prize pool, verifiable on-chain"
+    },
+    "q4": {
+      "title": "Why do this?",
+      "content": "Because we don't want others to say we only stare at \"listing on spot\" every day<br/>Wanted to find some daily fun for the BinanceLife community, and casually build something<br/>If it succeeds, it belongs to the community; if it fails, I'll shut down and sleep"
+    },
+    "q5": {
+      "title": "What is Power? Can I sell it?",
+      "content": "Power is just platform internal points, cannot be traded, transferred, or withdrawn, it's just a lucky draw ticket"
+    },
+    "q6": {
+      "title": "How do I get Power?",
+      "content": "① Stake BinanceLife (Longer time means more power, retrieve anytime)<br/>② Lock BinanceLife directly exchange for Power"
+    },
+    "q7": {
+      "title": "Is my staked token safe?",
+      "content": "Smart contract code is 100% open source, anyone can view and verify<br/>Audited by world-class AI security researchers (Grok/GPT5/DeepSeek), no backdoors, no security vulnerabilities"
+    },
+    "q8": {
+      "title": "Where does the prize pool money come from? Who can initiate a draw?",
+      "content": "Anyone (including you) can:<br/> - Initiate a new draw yourself (Fill amount → Pay → Auto-list on square) <br/> - Or directly \"Sponsor/Boost\" existing draws, amount added is shown on leaderboard in real-time"
+    },
+    "q9": {
+      "title": "Does the platform charge fees?",
+      "content": "A small fee (0.01BNB) is charged for each event creation for Binance VRF on-chain drawing and platform maintenance, also to prevent malicious activities"
+    },
+    "q10": {
+      "title": "How are winnings distributed? Is it reliable?",
+      "content": "On-chain Binance VRF is used for drawing (picking winning numbers), smart contracts ensure transparency and fairness of every draw"
+    },
+    "q11": {
+      "title": "How is the leaderboard ranked?",
+      "content": "Sponsor Rank: Whoever puts more money into the pool ranks higher<br/>Winning Rank: Whoever wins more amount ranks higher"
+    },
+    "q12": {
+      "title": "What if no one plays?",
+      "content": "Then treat it as I bought the community a cup of milk tea, losing a few thousand U to shut down and sleep, no big deal<br/>If you don't play I don't lose, if you play I don't earn, as long as everyone is happy"
+    },
+    "q13": {
+      "title": "If it gets popular, will you secretly take a cut?",
+      "content": "No, code is fully open source, anyone can verify anytime that every penny went 100% into the prize pool. If I change code to take a cut, the whole net will scold me for three days and I'll be socially dead"
+    },
+    "q14": {
+      "title": "Can I help you promote?",
+      "content": "Of course, I'd love that!<br/>Retweet, show winning screenshots, invite people to draw, or open a prize pool of tens of thousands of U yourself<br/>Platform pays no promotion fees, all voluntary"
+    },
+    "q15": {
+      "title": "Will it be commercialized later?",
+      "content": "No plan for now<br/>If one day the community wants to add some small features, we'll open a community vote, minority obeys majority"
+    },
+    "q16": {
+      "title": "What if I have other questions?",
+      "content": "Directly @ me on X, or find me in the Telegram group<br/>I'm at home taking care of kids, nothing else to do all day"
+    }
+  }
+}

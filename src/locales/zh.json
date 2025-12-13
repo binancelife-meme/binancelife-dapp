@@ -1,0 +1,542 @@
+{
+  "intro": {
+    "title": "币安人生 (BinanceLife)",
+    "description": "一个Meme币，起源与币安创始人何一的一句玩笑话“你可太性情太通透了，简直就是币安思维，祝你持有BNB开币安汽车，住币安小区，享币安人生”，在社群中点燃了一场史无前例的中文迷因风暴",
+    "contract_address": "合约地址",
+    "copied": "地址已复制",
+    "buy_button": "购买代币",
+    "chart_button": "查看K线"
+  },
+  "audit": {
+    "title": "顶级AI安全审计",
+    "description": "智能合约已通过 Grok / GPT-5 / DeepSeek 等世界顶级AI模型的多重安全审查，确保代码逻辑无漏洞，资金绝对安全。",
+    "view_report": "查看审计报告"
+  },
+  "profile": {
+    "edit_title": "编辑资料",
+    "edit_button_title": "编辑资料",
+    "upload_avatar": {
+      "select_image": "请选择图片文件",
+      "size_limit": "文件大小不能超过5MB"
+    }
+  },
+  "site": {
+    "name": "币安人生",
+    "title": "币安人生 • 八方来财",
+    "description": "注入一丝灵力 开启币安人生"
+  },
+  "menu": {
+    "all": "全部",
+    "home": "主页",
+    "luck": "来财",
+    "power": "灵力",
+    "leaderboard": "排行榜",
+    "account": "账号",
+    "more": "更多",
+    "winners": "中奖结果",
+    "about": "关于",
+    "contact": "联系我们",
+    "help": "帮助",
+    "docs": "文档",
+    "faq": "常见问题",
+    "privicy_policy": "隐私政策",
+    "terms_of_use": "使用条款"
+  },
+  "settings": {
+    "connect_button": "连接钱包",
+    "locale_label": "多语言",
+    "theme_label": "主题"
+  },
+  "common": {
+    "load_more": "加载更多",
+    "loading_more": "加载中...",
+    "no_data": "暂无数据",
+    "coming_soon": "敬请期待"
+  },
+  "home": {
+    "title": "八方来财",
+    "sub_title": "币安人生社区 • 链上专属福利抽奖 • Meme新体验",
+    "fairness": "平台不赚钱",
+    "transparency": "所有赞助100%进奖池",
+    "trustless": "质押/锁仓免费抽",
+    "permissionless": "纯乐子",
+    "powered_by": "技术支持",
+    "get_power": "获取灵力",
+    "faq": "常见问题",
+    "claim_test_tokens": "领取测试币"
+  },
+  "faucet": {
+    "title": "领取测试币",
+    "bnb_testnet": "领取测试网 BNB",
+    "binance_life": "领取 币安人生",
+    "usdt": "领取 USDT",
+    "claim": "领取",
+    "claimed": "已领取",
+    "desc": "仅用于测试网环境",
+    "success": "领取成功",
+    "view_faucet": "打开水龙头"
+  },
+  "form": {
+    "btn_save": "保存",
+    "btn_play": "立即参与",
+    "profit": "待领取收益",
+    "wallet_confirm": "请在钱包确认",
+    "copy_address": "复制钱包地址",
+    "success": "成功",
+    "tx_success": "提交成功",
+    "tx_fail": "提交失败",
+    "tx_view": "查看交易",
+    "form_saved": "已保存",
+    "form_saved_fail": "保存失败",
+    "upload_fail": "上传失败",
+    "field_nickname": "昵称",
+    "field_address": "钱包地址"
+  },
+  "share": {
+    "copy_link": "复制链接",
+    "copy_success": "复制成功",
+    "share_on": "分享到",
+    "share_text": "🚀 到BinanceLife试试你的手气!\n💎 查看链接，来赢取大奖!\n{tags}\n"
+  },
+  "leaderboard": {
+    "title": "排行榜",
+    "subtitle": "查看用户排名和成就",
+    "full_title": "全网排行榜",
+    "userRank": "用户排行",
+    "kolRank": "KOL排行",
+    "sponsorRank": "赞助排行",
+    "power": "灵力",
+    "winnings": "赢取",
+    "participations": "参与次数",
+    "winRate": "胜率",
+    "followers": "粉丝数",
+    "sponsoredAmount": "赞助金额",
+    "activitiesCreated": "创建活动",
+    "avgReturn": "平均回报",
+    "tabs": {
+      "winning": "中奖榜",
+      "sponsorship": "赞助榜",
+      "initiator": "发起榜",
+      "locking": "锁仓榜",
+      "staking": "质押榜",
+      "power": "灵力榜"
+    },
+    "no_data": {
+      "title": "暂无上榜数据",
+      "subtitle": "快来参与活动冲榜吧"
+    }
+  },
+  "winner": {
+    "total_prize": "总奖金",
+    "unclaimed": "未领奖",
+    "view_details": "查看详情",
+    "load_more": "加载更多",
+    "round": "活动 #{id}",
+    "no_winners": "暂无中奖者"
+  },
+  "action": {
+    "success_claim": "领取成功",
+    "success_join": "参与成功"
+  },
+  "luckypot": {
+    "header": {
+      "ending_soon": "即将结束",
+      "ended": "已结束",
+      "by": "by"
+    },
+    "title": "抽奖活动",
+    "desc": "今天你抽了没？没抽就来抽，抽不到怪我",
+    "desc_list": "每个人都可参与和发起抽奖活动",
+    "create": "发起抽奖",
+    "more": "更多",
+    "sponsor": {
+      "title": "赞助",
+      "boost_title": "奖池加码",
+      "boost_desc": "支持喜欢的活动，提升热度",
+      "btn_sponsor": "我要赞助",
+      "modal_title": "赞助活动",
+      "amount_label": "赞助金额",
+      "balance": "可用余额",
+      "placeholder": "请输入赞助金额",
+      "notice": "* 赞助金额将直接计入奖池，不可退还。",
+      "cancel": "取消",
+      "confirm": "确认赞助",
+      "error_amount": "请输入有效的金额",
+      "error_tx": "交易启动失败",
+      "success": "赞助成功！",
+      "top3": "Top3 赞助者",
+      "total": "共",
+      "list": "赞助者列表",
+      "no_sponsors_yet": "暂无赞助者，快来赞助吧！",
+      "sponsor_btn": "赞助",
+      "refund_btn": "取回赞助",
+      "success_refund": "取回成功"
+    },
+    "infomation": {
+      "ended": "已结束",
+      "creator": "发起人:",
+      "pool_value": "奖池价值",
+      "participants": "已参与",
+      "total_sponsored": "赞助总额",
+      "power_cost": "消耗灵力",
+      "people": "人",
+      "per_ticket": "/ 票"
+    },
+    "detail": {
+      "tabs": {
+        "activity": "活动",
+        "participants": "参与者",
+        "my_tickets": "我的票据",
+        "sponsors": "赞助者"
+      },
+      "activity": {
+        "tickets": "票",
+        "load_more": "加载更多",
+        "loading_more": "加载中..."
+      },
+      "my_tickets": {
+        "ticket_counts": "票据数量:",
+        "your_chance": "中奖概率:",
+        "tickets": "票",
+        "load_more": "加载更多",
+        "loading_more": "加载中...",
+        "connect_wallet": "连接钱包查看"
+      },
+      "participants": {
+        "tickets": "票",
+        "load_more": "加载更多",
+        "loading_more": "加载中..."
+      },
+      "status": {
+        "creating": "创建中...",
+        "canceled": "活动已取消",
+        "failed": "活动已失效",
+        "drawing": "开奖中...",
+        "ongoing": "进行中",
+        "ended": "已结束",
+        "grand_prize": "一等奖",
+        "second_prize": "二等奖",
+        "third_prize": "三等奖",
+        "consolation": "安慰奖",
+        "winning_results": "中奖结果",
+        "draw_tx": "开奖交易",
+        "rank": "排名",
+        "winning_no": "中奖号码",
+        "prize": "奖品",
+        "winner": "中奖者",
+        "unclaimed": "未领奖",
+        "action_success": "操作成功",
+        "cancel_desc": "活动刚创建无人参与，可取消",
+        "cancel_btn": "取消活动",
+        "close_desc": "活动已过期无人参与，可关闭取回资金",
+        "close_btn": "关闭活动"
+      }
+    },
+    "claim": {
+      "congrats": "恭喜中奖!",
+      "you_won": "您有 {count} 张票中奖",
+      "total_prize": "总奖金",
+      "claim_btn": "领取奖励"
+    },
+    "prize": {
+      "total_amount": "总奖金额"
+    },
+    "stat": {
+      "participants": "参与者",
+      "sponsors": "赞助",
+      "power_cost": "灵力消耗/票"
+    },
+    "state": {
+      "play": "立即参与",
+      "ongoing": "进行中",
+      "canceled": "已取消",
+      "drawing": "开奖中",
+      "failed": "已过期",
+      "ended": "已结束"
+    },
+    "filter": {
+      "status": "状态",
+      "status_options": {
+        "1": "进行中",
+        "2": "开奖中",
+        "3": "已结束",
+        "4": "已取消",
+        "5": "已过期"
+      },
+      "sort": "排序",
+      "sort_options": {
+        "time-remaining": "剩余时间",
+        "newest": "最新发起",
+        "oldest": "最早发起"
+      }
+    }
+  },
+  "games": {
+    "list": {
+      "latest_winner": "最新中奖者"
+    }
+  },
+  "luckypotCreate": {
+    "caption": "发起抽奖",
+    "name": "我要当今天最壕的人（发起抽奖）",
+    "desc": "填一填，几秒钟就让你上热搜第一",
+    "prize_select": "选择奖品",
+    "prize_amount": "奖品数量",
+    "powerToken": "灵力代币",
+    "powerUnit": "灵力数量/票",
+    "endTime": "结束时间",
+    "maxPerUser": "最大票数限制/人",
+    "maxPerUserTip": "每个钱包票数上限，0 表示无限制，默认 0",
+    "note": "额外留言(可选)",
+    "balance": "余额",
+    "btn": {
+      "submit": "确认发起",
+      "approval": "请在钱包确认",
+      "confirm": "请在钱包确认交易",
+      "view_tx": "查看交易",
+      "apply": "确定"
+    },
+    "guide": {
+      "title": "创建奖池指南",
+      "desc": "选择奖品：可以选择BNB/USDT/Meme币\n奖池金额：随便填，100U 也能玩，1万U 直接封神\n灵力代币：用户抽奖需要的代币，默认是币安人生\n结束时间：最短1小时，最长7天，随你心情\n额外留言（可选）：比如“冲了兄弟们”“币安看了也会沉默”"
+    },
+    "success": {
+      "transaction_success": "交易成功"
+    },
+    "error": {
+      "transaction_fail": "交易失败",
+      "approval_fail": "授权失败",
+      "invalid_form": "无效表单",
+      "wallet_not_connected": "钱包未连接",
+      "contract_not_ready": "合约未就绪",
+      "select_prize": "请选择奖品",
+      "invalid_prize_amount": "奖品数量必须大于0",
+      "invalid_power_token": "灵力代币必须选择",
+      "invalid_power_unit": "灵力数量必须大于0",
+      "end_date_required": "请设置结束日期",
+      "end_date_in_future": "结束日期必须在未来"
+    }
+  },
+  "luckypotBuy": {
+    "error_require_tickets_title": "需要输入票数",
+    "error_require_tickets_msg": "请输入要购买的票数",
+    "why_title": "平方根计费说明",
+    "why_desc": "采用平方根算法防止巨鲸垄断",
+    "tooltip_formula": "消耗灵力 = 票数² × 单价",
+    "formula_title": "计费公式：",
+    "formula_calc": "{amount}² × {unit} = {pay} 灵力",
+    "cost": "消耗",
+    "power": "灵力",
+    "success_detail": "成功购买 {amount} 票，消耗 {pay} {currency}",
+    "closed_success": "抽奖已关闭",
+    "err_nonce_low": "交易被拒：nonce过低，请等待前一笔交易上链或在钱包重试",
+    "err_insufficient_funds": "余额不足，无法支付本次交易费用",
+    "err_user_reject": "你已在钱包拒绝交易",
+    "err_underpriced": "替换交易价格过低，请提高Gas或等待",
+    "btn_close": "关闭抽奖",
+    "tooltip_title": "投入票数越多，中奖概率越高",
+    "tooltip_desc": "每增加1票，消耗的灵力会呈指数级增加",
+    "current_power": "我的灵力",
+    "input_tickets": "投入票数",
+    "input_placeholder": "请输入票数",
+    "ticket_unit": "票",
+    "tips_prefix": "灵力不足？前往",
+    "tips_link": "获取灵力",
+    "tips_suffix": "",
+    "pay_comment": {
+      "tips_title": "添加链上留言",
+      "optional": "可选",
+      "desc": "添加一条上链的留言",
+      "max_chars": "最多250个字符",
+      "placeholder": "请输入留言内容（可选）"
+    }
+  },
+  "power": {
+    "title": "获取灵力",
+    "subtitle": "通过多种方式获取灵力，提升中奖概率",
+    "cards": {
+      "power_title": "灵力",
+      "stake_title": "质押数量",
+      "lock_title": "锁仓数量",
+      "suffix_binancelife": "币安人生"
+    },
+    "tabs": {
+      "locking": "锁仓-兑换灵力",
+      "staking": "质押-获取灵力"
+    },
+    "hints": {
+      "locking": {
+        "title": "锁仓-兑换灵力",
+        "description": "锁仓可获得更高的灵力产出，获取速度更快。"
+      },
+      "staking": {
+        "title": "质押-获取灵力",
+        "description": "质押方式更加灵活，但产出速度较慢，数量较少。"
+      }
+    }
+  },
+  "powerLocking": {
+    "title": "锁仓-兑换灵力",
+    "action": {
+      "power": "灵力",
+      "lock_amount": "锁仓数量",
+      "available": "可用",
+      "duration": "锁仓时长",
+      "select_duration": "选择时长",
+      "preview_power": "锁仓总灵力预览",
+      "approve_loading": "授权中...",
+      "lock_loading": "锁仓中...",
+      "confirm_lock": "确认锁仓",
+      "success_lock": "锁仓成功！",
+      "success_approve": "授权成功！请继续操作",
+      "max": "MAX"
+    },
+    "duration_options": {
+      "day": "天"
+    },
+    "history": {
+      "title": "锁仓列表",
+      "unlock_time": "解锁时间",
+      "no_records": "暂无锁仓记录",
+      "status": {
+        "locked": "锁仓中",
+        "unlocked": "可取回",
+        "withdrawn": "已取回"
+      },
+      "action": {
+        "unlock": "取回",
+        "unlocking": "取回中..."
+      },
+      "locked_amount": "锁仓数量",
+      "power_amount": "获得灵力",
+      "countdown": "剩余时间"
+    }
+  },
+  "powerStaking": {
+    "title": "质押-获取灵力",
+    "action": {
+      "stake_amount": "质押数量",
+      "available": "可用",
+      "max": "MAX",
+      "tips": "随时存取，收益实时结算",
+      "preview_mining": "挖矿收益预览",
+      "power_per_day": "灵力 / 天",
+      "approve": "授权",
+      "approve_loading": "授权中...",
+      "stake_loading": "质押中...",
+      "stake": "立即质押",
+      "unstake_loading": "取回中...",
+      "unstake": "取回",
+      "claim_loading": "收获中...",
+      "claim": "收获灵力",
+      "success_stake": "质押成功！",
+      "success_approve": "授权成功！请继续操作",
+      "success_unstake": "取回成功！",
+      "success_claim": "收获灵力成功！",
+      "error_input_unstake": "请输入取回数量",
+      "error_no_staked": "当前无质押金额",
+      "error_no_claimable": "当前无可领取灵力"
+    },
+    "my_staking": {
+      "title": "我的质押",
+      "total_staked": "累计质押",
+      "current_staked": "当前质押",
+      "claimed_power": "已领取灵力",
+      "pending_power": "待领取灵力"
+    },
+    "history": {
+      "title": "我的质押记录",
+      "mining": "正在挖矿",
+      "current_yield": "当前产出",
+      "per_day": "/Day",
+      "no_records": "暂无质押记录"
+    }
+  },
+  "account": {
+    "activity": "活动",
+    "wins": "中奖",
+    "bets": "投注",
+    "total": "累计",
+    "wagered": "投注金额",
+    "winnings": "中奖金额",
+    "statistic": "统计",
+    "top_play_games": "常玩游戏",
+    "bind_telegram": "绑定Telegram账号",
+    "tabs": {
+      "created": "发起",
+      "participated": "参与",
+      "won": "中奖",
+      "sponsored": "赞助"
+    }
+  },
+  "faqs": {
+    "q0": {
+      "title": "币安人生 • 八方来财 到底是什么？",
+      "content": "币安人生社区爱好者，打造的链上meme抽奖玩具(实验性项目)<br/>质押/锁仓[币安人生] → 获得灵力（平台内部积分）→ 用灵力免费参与各种抽奖，仅此而已"
+    },
+    "q1": {
+      "title": "怎么玩？",
+      "content": "• 质押或锁仓获取灵力<br/>• 选择活动，参与或赞助<br/>• 等待开奖，领取奖励<br/>• 一切都很简单，像扔骰子一样快乐！"
+    },
+    "q2": {
+      "title": "活动规则",
+      "content": "活动固定设置4个奖项，分别对应80% / 10% / 6% / 4% 的奖金分配(包含赞助金额)<br/>活动结束后，通过BinanceVRF抽取4个幸运号码，中奖用户自行领取"
+    },
+    "q3": {
+      "title": "你们赚不赚钱？发币吗？",
+      "content": "不赚钱，也不发币<br/>平台不抽成、不收手续费、不拿一分钱赞助提成所有赞助 100% 进奖池，链上可查"
+    },
+    "q4": {
+      "title": "为什么要做这个？",
+      "content": "因为不想别人说我们只会每天盯着“上不上现货”<br/>想给币安人生社区找点每天能来的小乐子，顺便浅浅赋能(Build)一下<br/>做成了算社区集体所有，做砸了我关站睡觉"
+    },
+    "q5": {
+      "title": "灵力是什么？能卖吗？",
+      "content": "灵力只是平台内部积分，不能交易、不能转账、不能提现，就是个抽奖门票"
+    },
+    "q6": {
+      "title": "我怎么获得灵力？",
+      "content": "① 质押 币安人生（时间越长灵力越多，随时可以取回）<br/>② 锁仓 币安人生 直接兑换灵力"
+    },
+    "q7": {
+      "title": "我质押的代币安全吗？",
+      "content": "智能合约代码100%开源，任何人都可以查看和验证<br/>已经过世界顶级AI安全研究员审核(Grok/GPT5/DeepSeek),无后门无安全漏洞"
+    },
+    "q8": {
+      "title": "奖池的钱从哪来？谁能发起抽奖？",
+      "content": "任何人（包括你）都可以：<br/> - 自己发起一个新抽奖（填金额 → 支付 → 自动上广场） <br/> - 或者直接给已有抽奖“赞助/加池”，加多少实时显示在排行榜"
+    },
+    "q9": {
+      "title": "平台收取费用吗？",
+      "content": "每次创建活动收取少量费用(0.01BNB)用于Binance VRF链上开奖和平台维护，也用于防止恶意活动"
+    },
+    "q10": {
+      "title": "中奖的钱怎么发？可靠吗？",
+      "content": "链上采用Binance VRF开奖(抽中奖号码)，智能合约保障每次开奖的透明性和公平性"
+    },
+    "q11": {
+      "title": "排行榜是怎么排的？",
+      "content": "赞助榜：谁往奖池里塞钱多谁排前面<br/>中奖榜：谁中奖金额高谁排前面"
+    },
+    "q12": {
+      "title": "万一没人玩怎么办？",
+      "content": "那就当我请社区喝了杯奶茶，亏几千U关站睡觉，没什么大不了的<br/>你不来玩我也不亏，你来玩我也不赚，大家高兴就好"
+    },
+    "q13": {
+      "title": "万一火了你们会偷偷抽成吗？",
+      "content": "不会，代码完全开源，任何人都可以随时验证每一笔钱都100%进了奖池真要改代码抽成，全网叉腰骂我三天我就社死了"
+    },
+    "q14": {
+      "title": "我可以帮你们宣传吗？",
+      "content": "当然求之不得！<br/>转发、晒中奖截图、拉人来抽、自己开个几万U的奖池都行<br/>平台不付推广费，全靠大家自发"
+    },
+    "q15": {
+      "title": "以后会商业化吗？",
+      "content": "暂时没这个打算<br/>真要哪天社区说想加点小功能再开社区投票，少数服从多数"
+    },
+    "q16": {
+      "title": "我还有别的疑问怎么办？",
+      "content": "直接在X上面@我，或者进电报群找我<br/>我本人在家带孩子，一天天的没别的事"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(100, 100)">
+    <path 
+      d="M0,-80 Q 50,-50 80,0 Q 50,50 0,80 Q -50,50 -80,0 Q -50,-50 0,-80 Z M0,-25 L25,0 L0,25 L-25,0 Z" 
+      fill="#52525B" 
+      fill-rule="evenodd" 
+    />
+  </g>
+</svg>
