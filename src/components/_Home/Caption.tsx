@@ -28,7 +28,7 @@ const Caption = ({
   return (
     <div className={cn("flex relative gap-4 justify-between w-full max-md:flex-wrap max-md:max-w-full", className)}>
       <div className="flex-grow-1 text-foreground">
-        <span className={cn("text-h4 font-bold", textClassName)}>{title}</span>
+        <span className={cn("text-2xl max-md:text-md font-bold", textClassName)}>{title}</span>
         {desc && (
           <div className={"mt-2 justify-start text-pm text-foreground-800"}>
             {desc}

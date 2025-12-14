@@ -16,14 +16,6 @@ const nextConfig = {
       encoding: false,
     };
 
-    // Do not bundle @uxuycom/web3-tg-sdk into server/client; keep it external
-    config.externals = Array.isArray(config.externals)
-      ? [...config.externals, "@uxuycom/web3-tg-sdk"]
-      : {
-          ...config.externals,
-          "@uxuycom/web3-tg-sdk": "commonjs @uxuycom/web3-tg-sdk",
-        };
-
     // On the server, replace idb-keyval with a server-safe stub
     if (isServer) {
       const idbStubPath = path.join(

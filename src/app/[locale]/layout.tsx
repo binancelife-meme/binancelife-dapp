@@ -25,7 +25,7 @@ export const metadata = async (): Promise<Metadata> => {
     description: t("description"),
     authors: {
       name: "BinanceLife",
-      url: "https://github.com/BinanceLife/binancelife-dapp",
+      url: "https://github.com/bnancelife-meme/binancelife-dapp",
     },
 
     icons: "/favicon.ico",
@@ -38,7 +38,7 @@ export const metadata = async (): Promise<Metadata> => {
       siteName: "BinanceLife",
       images: [
         {
-          url: `/img/logo.png`,
+          url: `/img/banner-test.png`,
         },
       ],
     },
@@ -50,7 +50,7 @@ export const metadata = async (): Promise<Metadata> => {
         template: "%s",
         default: t("title"),
       },
-      images: `/img/logo.png`,
+      images: `/img/banner-test.png`,
     },
   }
 };

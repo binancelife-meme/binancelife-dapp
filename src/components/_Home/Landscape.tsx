@@ -44,13 +44,13 @@ const Landscape = () => {
         <div className="w-full flex-col relative z-10 text-center text-wrap">
 
           <h1
-            className="text-4xl lg:text-6xl max-md:text-h6 mb-4 font-bold tracking-tight cursor-pointer"
+            className="text-4xl lg:text-6xl max-md:text-3xl mb-4 font-bold tracking-tight cursor-pointer"
             onClick={handleTitleClick}
           >
             {t.rich("title", { span: (children) => <span className='text-[#F0B90B] drop-shadow-[0_0_10px_rgba(240,185,11,0.5)]'>{children}</span> })}
           </h1>
           <Spacer y={2} />
-          <h2 className="text-xl max-md:text-sm mb-4 text-foreground text-wrap">
+          <h2 className="text-xl max-md:text-md mb-4 text-foreground text-wrap">
             {t("sub_title")}
           </h2>
           <Spacer y={2} />
