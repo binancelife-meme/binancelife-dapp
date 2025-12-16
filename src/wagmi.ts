@@ -13,7 +13,6 @@ import {
 
 import { AppConfig } from "./config";
 import { chains } from "./constants/chains";
-import { uxuyWallet } from "./wallets/uxuyWallet";
 
 const walletConnectProjectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
 
@@ -34,7 +33,6 @@ export const config = getDefaultConfig({
     {
       groupName: "More",
       wallets: [
-        uxuyWallet,
         oneKeyWallet,
         ledgerWallet,
         trustWallet,

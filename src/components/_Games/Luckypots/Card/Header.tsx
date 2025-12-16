@@ -61,7 +61,7 @@ const Header = ({ item }: { item: Luckypot }) => {
                         <UserLink
                             className="flex-grow-0 ml-0 pl-0 items-center hover:underline"
                             textClassName="max-w-40 text-xs text-gray-300 font-medium"
-                            size={{ width: 16, height: 16 }}
+                            size={{ width: 20, height: 20 }}
                             id={item.funder?.id}
                             name={item.funder?.name || getShortAddress(item.funder?.id)}
                             address={item.funder?.id}

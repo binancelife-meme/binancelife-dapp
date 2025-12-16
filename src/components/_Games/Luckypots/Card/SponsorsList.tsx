@@ -65,11 +65,11 @@ const SponsorsList = ({ item }: { item: Luckypot }) => {
           {items && items.length > 0 && items.slice(0, 3).map((sponsor: any, i: number) => (
             <div
               key={i}
-              className="flex items-center justify-between text-[10px] text-gray-300 w-full px-1"
+              className="flex items-center justify-between text-xs text-gray-300 w-full px-1"
             >
               <div className="flex items-center space-x-2">
                 <div
-                  className={`w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold text-black ${i === 0
+                  className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-black ${i === 0
                     ? "bg-yellow-400"
                     : i === 1
                       ? "bg-gray-300"

@@ -105,7 +105,7 @@ const Infomation = ({ item }: { item: Luckypot }) => {
           <div className="text-xl font-bold text-white">
             <CryptoCurrency
               token={token.name!}
-              value={tokenValue(item.sponsorAmount || 0, 18)}
+              value={tokenValue(Number(item.sponsorAmount || 0), 18).toFixed(2)}
               display="Crypto"
               showSuffix={true}
             />
