@@ -24,7 +24,7 @@ export const bscTestnetTokens = {
     'USDC',
     'Binance-Peg USD Coin',
   ),
-  usdt: new ERC20Token(ChainId.BNB_TESTNET, '0x228375DcfD6aF8Bc58E9A5aA57Fa4fBc3fd44444', 18, 'USDT', 'Tether USD'),
+  usdt: new ERC20Token(ChainId.BNB_TESTNET, '0x72e021B01725Ac56b6536f479BcD5263358E5680', 18, 'USDT', 'Tether USD'),
   mockBusd: new ERC20Token(
     ChainId.BNB_TESTNET,
     '0x3304dd20f6Fe094Cb0134a6c8ae07EcE26c7b6A7',
@@ -45,7 +45,7 @@ export const bscTestnetTokens = {
   ),
   币安人生: new ERC20Token(
     ChainId.BNB_TESTNET,
-    '0xF6D9f3614d35fbf707540DF65127d2d17B85B717',
+    '0x5c9207E9b6DEcD2c883E7F312B912F83DBBcd45C',
     18,
     '币安人生',
     '币安人生',

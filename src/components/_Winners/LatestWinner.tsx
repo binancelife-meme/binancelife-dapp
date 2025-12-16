@@ -81,7 +81,7 @@ const LatestWinner = () => {
   } = useLuckypotQuery({
     status: LuckypotStatus.ENDED,
     orderBy: "endTime",
-    orderDirection: "asc",
+    orderDirection: "desc",
   }, walletAddress);
 
   const items = data?.pages
