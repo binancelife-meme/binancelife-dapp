@@ -1,3 +1,4 @@
+import { Skeleton } from "@heroui/react";
 import { isEmpty } from "lodash";
 import { Coins } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -24,6 +25,7 @@ const SponsorsList = ({ item }: { item: Luckypot }) => {
   const {
     data,
     refetch,
+    isLoading,
   } = useLuckypotSponsorsQuery(filters);
 
   // Use effect to refetch when triggers.payment changes
@@ -38,10 +40,6 @@ const SponsorsList = ({ item }: { item: Luckypot }) => {
   const items = data?.pages
     .flatMap((it: any) => it.data)
     .filter((it: any) => !isEmpty(it));
-
-  // if (!items || items.length === 0) {
-  //   return null;
-  // }
 
   const symbol = item.prizeToken?.symbol || "BNB";
 
@@ -62,44 +60,61 @@ const SponsorsList = ({ item }: { item: Luckypot }) => {
         </div>
 
         <div className="flex flex-col space-y-1 w-full min-h-12">
-          {items && items.length > 0 && items.slice(0, 3).map((sponsor: any, i: number) => (
-            <div
-              key={i}
-              className="flex items-center justify-between text-xs text-gray-300 w-full px-1"
-            >
-              <div className="flex items-center space-x-2">
-                <div
-                  className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-black ${i === 0
-                    ? "bg-yellow-400"
-                    : i === 1
-                      ? "bg-gray-300"
-                      : "bg-orange-600"
-                    }`}
-                >
-                  {i + 1}
+          {isLoading ? (
+            Array.from({ length: 3 }).map((_, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between w-full px-1"
+              >
+                <div className="flex items-center space-x-2">
+                  <Skeleton className="w-5 h-5 rounded-full" />
+                  <Skeleton className="w-20 h-4 rounded-lg" />
                 </div>
-                <div className="flex items-center gap-1">
-                  <UserLink
-                    className="justify-start min-h-[16px] items-center"
-                    textWrapperClassName="flex flex-col"
-                    textClassName="whitespace-nowrap text-ellipsis overflow-hidden max-w-32"
-                    id={sponsor.user?.id}
-                    name={sponsor.user?.name || getShortAddress(sponsor.user?.id)}
-                    address={sponsor.user?.id}
-                    avatar={sponsor.user?.avatar}
-                    showIcon={true}
-                    showName={true}
-                    size={{ width: 16, height: 16 }}
-                  />
-                </div>
+                <Skeleton className="w-16 h-4 rounded-lg" />
               </div>
-              <span className="text-yellow-400/80">{formatEther(BigInt(sponsor.sponsorAmount))} {symbol}</span>
-            </div>
-          ))}
-          {(!items || items.length === 0) && (
-            <div className="text-center py-4 text-gray-500 text-xs">
-              {t("sponsor.no_sponsors_yet")}
-            </div>
+            ))
+          ) : (
+            <>
+              {items && items.length > 0 && items.slice(0, 3).map((sponsor: any, i: number) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-between text-xs text-gray-300 w-full px-1"
+                >
+                  <div className="flex items-center space-x-2">
+                    <div
+                      className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-black ${i === 0
+                        ? "bg-yellow-400"
+                        : i === 1
+                          ? "bg-gray-300"
+                          : "bg-orange-600"
+                        }`}
+                    >
+                      {i + 1}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <UserLink
+                        className="justify-start min-h-[16px] items-center"
+                        textWrapperClassName="flex flex-col"
+                        textClassName="whitespace-nowrap text-ellipsis overflow-hidden max-w-32"
+                        id={sponsor.user?.id}
+                        name={sponsor.user?.name || getShortAddress(sponsor.user?.id)}
+                        address={sponsor.user?.id}
+                        avatar={sponsor.user?.avatar}
+                        showIcon={true}
+                        showName={true}
+                        size={{ width: 16, height: 16 }}
+                      />
+                    </div>
+                  </div>
+                  <span className="text-yellow-400/80">{formatEther(BigInt(sponsor.sponsorAmount))} {symbol}</span>
+                </div>
+              ))}
+              {(!items || items.length === 0) && (
+                <div className="text-center py-4 text-gray-500 text-xs">
+                  {t("sponsor.no_sponsors_yet")}
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
