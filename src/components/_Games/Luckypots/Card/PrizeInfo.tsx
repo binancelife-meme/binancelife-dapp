@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl";
 import React from "react";
-import { formatEther } from "viem";
 
 import CryptoCurrency from "@/components/CryptoCurrency";
 import { type Luckypot } from "@/types/luckypot/luckypot";
-import { getLuckypotPrizeToken } from "@/utils/prizeUtils";
 import { tokenValue } from "@/utils/formatters";
+import { getLuckypotPrizeToken } from "@/utils/prizeUtils";
+
 
 const PrizeInfo = ({ item }: { item: Luckypot }) => {
   const t = useTranslations("luckypot");

@@ -29,7 +29,7 @@ import { WinningLeaderboard } from "./WinningLeaderboard";
 
 const Leaderboard = () => {
   const t = useTranslations("leaderboard");
-  const [activeTab, setActiveTab] = useState<string>("winning");
+  const [activeTab, setActiveTab] = useState<string>("sponsorship");
 
   const getRankIcon = (rank: number) => {
     switch (rank) {
