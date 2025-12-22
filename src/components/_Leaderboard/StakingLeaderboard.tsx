@@ -19,7 +19,7 @@ export const StakingLeaderboard = ({ getRankIcon, getRankColor }: StakingLeaderb
     first: 20
   });
 
-  const formattedData = data?.pages.flatMap((page: any) => page.data).map((item: any) => ({
+  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item && item.staking > 0).map((item: any) => ({
     ...item,
     score: tokenValue(item.staking || "0", 18).toLocaleString(),
     unit: item.token?.symbol || ''

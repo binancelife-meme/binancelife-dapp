@@ -19,7 +19,7 @@ export const SponsorshipLeaderboard = ({ getRankIcon, getRankColor }: Sponsorshi
     first: 20
   });
 
-  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item.sponsorAmount > 0).map((item: any) => ({
+  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item && item.sponsorAmount > 0).map((item: any) => ({
     ...item,
     score: tokenValue(item.sponsorAmount || "0", 18).toLocaleString(),
     unit: item.token?.symbol || 'BNB'

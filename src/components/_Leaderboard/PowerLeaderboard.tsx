@@ -21,7 +21,7 @@ export const PowerLeaderboard = ({ getRankIcon, getRankColor }: PowerLeaderboard
     first: 20
   });
 
-  const formattedData = data?.pages.flatMap((page: any) => page.data).map((item: any) => ({
+  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item && item.balance > 0).map((item: any) => ({
     ...item,
     score: item?.balance ? Number(formatEther(BigInt(item.balance))).toLocaleString() : "0",
     unit: t("power")

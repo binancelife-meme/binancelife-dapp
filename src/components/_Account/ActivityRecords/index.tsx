@@ -17,7 +17,7 @@ import WonRecords from "./WonRecords";
 
 const ActivityRecords = ({ userId }: { userId: string }) => {
   const t = useTranslations("account");
-  const [activeTab, setActiveTab] = useState<string>("created");
+  const [activeTab, setActiveTab] = useState<string>("participated");
 
   return (
     <Card className="bg-[#121212] border border-white/10 w-full">

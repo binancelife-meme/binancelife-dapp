@@ -30,6 +30,7 @@ import { POWER_TOKENS } from "@/constants/tokens/defaultToken";
 import { usePowerLockRecordQuery } from "@/hooks/data/usePowerQuery";
 import { useContractAbi } from "@/hooks/useContractAbi";
 import { tokenValue } from "@/utils/formatters";
+import { isEmpty } from "lodash";
 
 const PowerLocking = () => {
   const t = useTranslations("powerLocking");
@@ -84,10 +85,10 @@ const PowerLocking = () => {
 
   // Transaction Receipts
   const { isSuccess: isLockSuccess, isLoading: isLockConfirming } = useWaitForTransactionReceipt({ hash: lockHash });
-  const { 
-    isSuccess: isApproveSuccess, 
-    isLoading: isApproveConfirming, 
-    isError: isApproveReceiptError 
+  const {
+    isSuccess: isApproveSuccess,
+    isLoading: isApproveConfirming,
+    isError: isApproveReceiptError
   } = useWaitForTransactionReceipt({ hash: approveHash });
   const { isSuccess: isUnlockSuccess, isLoading: isUnlockConfirming } = useWaitForTransactionReceipt({ hash: unlockHash });
 
@@ -203,7 +204,7 @@ const PowerLocking = () => {
   };
 
 
-  const items = locks?.pages?.flatMap((page: any) => page.data) || [];
+  const items = locks?.pages?.flatMap((page: any) => page.data).filter((it: any) => !isEmpty(it)) || [];
 
   const lockDurations = [
     { label: `3 ${t("duration_options.day")} (1.0x)`, value: "3", multiplier: 1.0 },

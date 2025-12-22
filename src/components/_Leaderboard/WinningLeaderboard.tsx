@@ -20,7 +20,7 @@ export const WinningLeaderboard = ({ getRankIcon, getRankColor }: WinningLeaderb
     first: 20
   });
 
-  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item.winAmount > 0).map((item: any) => ({
+  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item && item.winAmount > 0).map((item: any) => ({
     ...item,
     score: tokenValue(item.winAmount || "0", 18).toLocaleString(),
     unit: item.token?.symbol || 'BNB'

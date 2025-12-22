@@ -20,7 +20,7 @@ export const LockingLeaderboard = ({ getRankIcon, getRankColor }: LockingLeaderb
     first: 20
   });
 
-  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item.locked > 0).map((item: any) => ({
+  const formattedData = data?.pages.flatMap((page: any) => page.data).filter((item: any) => item && item.locked > 0).map((item: any) => ({
     ...item,
     score: tokenValue(item.locking || "0", 18).toLocaleString(),
     unit: item.token?.symbol || ''
