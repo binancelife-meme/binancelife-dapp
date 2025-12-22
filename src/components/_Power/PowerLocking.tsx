@@ -8,6 +8,7 @@ import {
   Radio,
   cn
 } from "@heroui/react";
+import { isEmpty } from "lodash";
 import {
   Lock,
   Timer,
@@ -30,7 +31,7 @@ import { POWER_TOKENS } from "@/constants/tokens/defaultToken";
 import { usePowerLockRecordQuery } from "@/hooks/data/usePowerQuery";
 import { useContractAbi } from "@/hooks/useContractAbi";
 import { tokenValue } from "@/utils/formatters";
-import { isEmpty } from "lodash";
+
 
 const PowerLocking = () => {
   const t = useTranslations("powerLocking");

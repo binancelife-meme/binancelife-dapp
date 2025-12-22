@@ -45,6 +45,19 @@ const LuckypotForm = ({
   const variant = "flat";
 
   useEffect(() => {
+    setValue(
+      "powerToken",
+      {
+        address: defaultToken.address,
+        name: defaultToken.name,
+        symbol: defaultToken.symbol,
+        decimals: defaultToken.decimals,
+      },
+      { shouldDirty: true }
+    );
+  }, []);
+
+  useEffect(() => {
     if (!powerToken && defaultToken) {
       setValue(
         "powerToken",
