@@ -38,7 +38,7 @@ export const metadata = async (): Promise<Metadata> => {
       siteName: "BinanceLife",
       images: [
         {
-          url: `/img/banner-test.png`,
+          url: `/img/banner.png`,
         },
       ],
     },
@@ -50,7 +50,7 @@ export const metadata = async (): Promise<Metadata> => {
         template: "%s",
         default: t("title"),
       },
-      images: `/img/banner-test.png`,
+      images: `/img/banner.png`,
     },
   }
 };
