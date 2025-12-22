@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { useAccount } from "wagmi";
 
+import { AppConfig } from "@/config";
 import { useRefetchContext } from "@/context/RefetchContext";
 import { useLuckypotQuery } from "@/hooks/data";
 import { useRouter } from "@/libs/i18nNavigation";
@@ -15,12 +16,14 @@ import { useRouter } from "@/libs/i18nNavigation";
 import Caption from "./Caption";
 import CardSlider from "./LuckypotCardSlider";
 
+
 const HotLuckypot = () => {
   const t = useTranslations("luckypot");
 
   const { address: walletAddress } = useAccount();
   const { data, isLoading, refetch } = useLuckypotQuery(
     {
+      chainIds: `${AppConfig.chainId}`,
       first: 20,
       // status: LuckypotStatus.ONGOING,
       orderBy: "endTime",

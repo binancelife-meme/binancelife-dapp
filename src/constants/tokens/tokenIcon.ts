@@ -16,5 +16,6 @@ const icons: Record<string, string[]> = {
   SOL: ["https://s2.coinmarketcap.com/static/img/coins/200x200/5426.png"],
   USDT: ["https://s2.coinmarketcap.com/static/img/coins/200x200/825.png"],
   USDC: ["https://s2.coinmarketcap.com/static/img/coins/200x200/3408.png"],
-  "币安人生":["https://static.four.meme/market/651c4fd9-01e7-4265-bd6c-be9a1b37a3c716221836807844210141.png"],
+  U: ["https://s2.coinmarketcap.com/static/img/coins/200x200/39120.png"],
+  "币安人生": ["https://s2.coinmarketcap.com/static/img/coins/200x200/38590.png"],
 };

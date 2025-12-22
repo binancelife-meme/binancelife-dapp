@@ -16,7 +16,7 @@ export type ChainTokenList = ChainMap<Token[]>
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
 
-    [ChainId.BNB]: [bscTokens.usdt, bscTokens.usdc],
+    [ChainId.BNB]: [bscTokens.u, bscTokens.usdt, bscTokens.usdc],
     [ChainId.BNB_TESTNET]: [bscTestnetTokens.usdt],
     [ChainId.LOCALHOST]: [USDT[ChainId.LOCALHOST]]
 }

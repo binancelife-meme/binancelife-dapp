@@ -309,7 +309,7 @@
     },
     "guide": {
       "title": "Create Pool Guide",
-      "desc": "Select Prize: Choose BNB/USDT/Meme coins\nPrize Amount: Fill freely, 100U is fun, 10k U is godlike\nPower Token: Token required for draw, default is BinanceLife\nEnd Time: Min 1 hour, max 7 days, up to you\nExtra Note (Optional): e.g. \"Let's go brothers\", \"Even Binance would be silent\""
+      "desc": "Select Prize: Choose BNB/U/USDT/USDC\nPrize Amount: Fill freely, 100U is fun, 10k U is godlike\nPower Token: Token required for draw, default is BinanceLife\nEnd Time: Min 1 hour, max 7 days, up to you\nExtra Note (Optional): e.g. \"Let's go brothers\", \"Even Binance would be silent\""
     },
     "success": {
       "transaction_success": "Transaction Successful"

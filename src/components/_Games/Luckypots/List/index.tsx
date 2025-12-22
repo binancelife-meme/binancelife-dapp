@@ -6,12 +6,12 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
-
 import LuckypotCard from "@/components/_Games/Luckypots/Card";
 import Filters from "@/components/_Games/Luckypots/Filters";
 import Container from "@/components/Container";
 import NoData from "@/components/Error/NoData";
 import ServerError from "@/components/Error/ServerError";
+import { AppConfig } from "@/config";
 import { useRefetchContext } from "@/context/RefetchContext";
 import { useLuckypotQuery } from "@/hooks/data";
 import { LuckypotQueryOpts } from "@/types/luckypot/luckypot.query";
@@ -22,6 +22,7 @@ import LuckypotListLoading from "./loading";
 const LuckypotList = () => {
   const [filters, setFilters] = useState<Record<string, any>>({
     ...paramsToObject<LuckypotQueryOpts>(useSearchParams()),
+    chainIds: `${AppConfig.chainId}`,
     orderBy: "endTime",
     orderDirection: "asc",
   });

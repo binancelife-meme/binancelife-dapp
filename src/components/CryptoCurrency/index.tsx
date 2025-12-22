@@ -42,7 +42,7 @@ const CryptoCurrency = ({
   let num, lable, icon;
   let price = data?.find((it: any) => it.name == token);
 
-  if (["USDT", "USDC"].includes(token)) {
+  if (["USDT", "USDC"].includes(token) || token == "U") {
     price = { name: token, price: 1 };
   }
 

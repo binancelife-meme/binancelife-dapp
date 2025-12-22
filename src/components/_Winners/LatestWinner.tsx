@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { useAccount } from "wagmi";
 
 import AppLink from "@/components/AppLink";
+import { AppConfig } from "@/config/AppConfig";
 import { useLuckypotQuery } from "@/hooks/data/useLuckypotQuery";
 import { Luckypot, LuckypotStatus } from "@/types";
 import { cn } from "@/utils/cn";
@@ -14,6 +15,7 @@ import WiningGroup from "../_Games/Luckypots/Card/WiningGroup";
 import GridHeader from "../_Games/Luckypots/Grid/GridHeader";
 import GridPrizeInfo from "../_Games/Luckypots/Grid/GridPrizeInfo";
 import Caption from "../_Home/Caption";
+
 
 const WinnerCard = ({ luckypot, t }: { luckypot: Luckypot, t: any }) => {
 
@@ -79,6 +81,7 @@ const LatestWinner = () => {
     refetch,
     queryError,
   } = useLuckypotQuery({
+    chainIds: `${AppConfig.chainId}`, 
     status: LuckypotStatus.ENDED,
     orderBy: "endTime",
     orderDirection: "desc",

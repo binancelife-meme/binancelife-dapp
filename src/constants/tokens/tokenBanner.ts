@@ -16,4 +16,5 @@ const banners: Record<string, string[]> = {
   SOL: ["/img/token/SOL.png"],
   USDT: ["/img/token/USDT.png"],
   USDC: ["/img/token/USDC.png"],
+  U: ["/img/token/U.png"],
 };

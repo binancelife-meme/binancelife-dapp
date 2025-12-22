@@ -24,13 +24,13 @@ export const DeployAddress: AddressMapping = {
   },
   [ChainId.BNB]: {
     [ContractNames.LuckypotContract]: {
-      address: "",
+      address: "0x4bFe87D4D1b1183a779F5912047D74e923d57f32",
     },
     [ContractNames.LuckyPower]: {
-      address: "",
+      address: "0x91A9d9eE9270d19E5c855f08f4A07561d24f4b68",
     },
     [ContractNames.LuckyPowerMiner]: {
-      address: "",
+      address: "0x1cc9ca37c291eCb1FDE8f5d4c22EbD4C3B2503b7",
     },
   },
   [ChainId.BNB_TESTNET]: {

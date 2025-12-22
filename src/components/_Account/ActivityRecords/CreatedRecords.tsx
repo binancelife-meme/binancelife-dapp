@@ -5,7 +5,9 @@ import { useTranslations } from "next-intl";
 import LuckypotGrid from "@/components/_Games/Luckypots/Grid";
 import NoData from "@/components/Error/NoData";
 import LoadMore from "@/components/LoadMore";
+import { AppConfig } from "@/config/AppConfig";
 import { useLuckypotQuery } from "@/hooks/data/useLuckypotQuery";
+
 
 interface CreatedRecordsProps {
   userId: string;
@@ -23,6 +25,7 @@ const CreatedRecords = ({ userId }: CreatedRecordsProps) => {
     isFetchingNextPage,
     isLoading
   } = useLuckypotQuery({
+    chainIds: `${AppConfig.chainId}`,
     funder: userId,
     orderBy: 'createdAt',
     orderDirection: 'desc',

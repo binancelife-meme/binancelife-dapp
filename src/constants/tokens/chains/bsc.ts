@@ -50,6 +50,14 @@ export const bscTokens = {
     'Binance-Peg USD Coin',
     'https://www.centre.io/usdc',
   ),
+  u: new ERC20Token(
+    ChainId.BNB,
+    '0xce24439f2d9c6a2289f741120fe202248b666666',
+    18,
+    'U',
+    'United Stables',
+    'https://u.tech',
+  ),
   币安人生: new ERC20Token(
     ChainId.BNB,
     '0x924fa68a0fc644485b8df8abfa0a41c2e7744444',
